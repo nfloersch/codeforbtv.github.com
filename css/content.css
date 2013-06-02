@@ -249,11 +249,6 @@ body > header#overview li:not(:last-child) {
     *width: 150px;
     height: auto;
 }
-#connect h1,
-#connect p,
-#connect ul {
-    text-align: center;
-}
 @media screen and (max-width: 479px) {
     body > header#overview h1 {
         margin-top: 0;

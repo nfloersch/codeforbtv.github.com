@@ -59,13 +59,22 @@ body > footer > article {
     padding-bottom: 0;
 }
 body > footer p,
+body > footer li,
 body > footer a {
     color: #AAA;
 }
-body > footer p {
+body > footer p,
+body > footer ul,
+body > footer ol {
     margin-top: 0.2em;
-    font-size: 1.0em;
     text-align: center;
+}
+body > footer p,
+body > footer li {
+    font-size: 1.0em;
+}
+body > footer nav li {
+    font-size: 1.4em;
 }
 body > footer a:hover,
 body > footer a:focus {
