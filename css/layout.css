@@ -36,52 +36,70 @@ body > footer > article {
 #overview.banner {
     padding-bottom: 1.0em;
 }
-#participate {
-    background-color: #F5F5F5;
+#next,
+#code-for-btv {
+    background-color: #CA1F35;
 }
-#participate #hackers,
-#participate #public,
-#schedule #june-1,
-#schedule #june-2 {
-    max-width: 400px;
-    width: 43%;
-}
-#producers-partners-sponsors {
-    border-top: 1px solid #AAA;
-    border-bottom: 1px solid #AAA;
-}
+#next article,
 #producers-partners-sponsors article,
 #credits article {
     width: 94%;
     text-align: center;
 }
+#recap {
+    background-color: #F5F5F5;
+}
+#metrics,
+#summary,
+#code-for-btv article,
+#schedule #june-1,
+#schedule #june-2 {
+    max-width: 400px;
+    width: 43%;
+}
+#next article {
+    padding-bottom: 0.4em;
+    text-align: left;
+}
+#producers-partners-sponsors {
+    border-top: 1px solid #AAA;
+    border-bottom: 1px solid #AAA;
+}
 #tracks {
     padding-bottom: 0;
 }
 body > footer p,
+body > footer li,
 body > footer a {
     color: #AAA;
 }
-body > footer p {
+body > footer p,
+body > footer ul,
+body > footer ol {
     margin-top: 0.2em;
-    font-size: 1.0em;
     text-align: center;
+}
+body > footer p,
+body > footer li {
+    font-size: 1.0em;
+}
+body > footer nav li {
+    font-size: 1.4em;
 }
 body > footer a:hover,
 body > footer a:focus {
     color: #BBB;
-}
-@media screen and (max-width: 599px) {
-    #participate #hackers,
-    #participate #public {
-        width: 94%;
-    }
 }
 @media screen and (max-width: 767px) {
     body > header > article,
     body > section > article,
     body > article > article,
     body > footer > article {
+        width: 94%;
+    }
+    #metrics,
+    #summary,
+    #code-for-btv article {
         width: 94%;
     }
     #schedule #june-1,
