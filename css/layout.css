@@ -37,25 +37,21 @@ body > footer > article {
     padding-bottom: 1.0em;
 }
 #next,
-#code-for-btv-meetup {
+#code-for-btv {
     background-color: #CA1F35;
 }
 #next article,
 #producers-partners-sponsors article,
-#credits article,
-#code-for-btv-meetup article {
+#credits article {
     width: 94%;
     text-align: center;
-}
-#next article,
-#code-for-btv-meetup article {
-    text-align: left;
 }
 #recap {
     background-color: #F5F5F5;
 }
 #metrics,
 #summary,
+#code-for-btv article,
 #schedule #june-1,
 #schedule #june-2 {
     max-width: 400px;
@@ -63,6 +59,7 @@ body > footer > article {
 }
 #next article {
     padding-bottom: 0.4em;
+    text-align: left;
 }
 #producers-partners-sponsors {
     border-top: 1px solid #AAA;
@@ -101,7 +98,8 @@ body > footer a:focus {
         width: 94%;
     }
     #metrics,
-    #summary {
+    #summary,
+    #code-for-btv article {
         width: 94%;
     }
     #schedule #june-1,
