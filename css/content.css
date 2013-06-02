@@ -288,7 +288,7 @@ body > header#overview li:not(:last-child) {
 }
 #next p {
     margin-top: 0;
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-align: center;
 }
 #code-for-btv-meetup nav li:not(:last-child) {
