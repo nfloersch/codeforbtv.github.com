@@ -225,6 +225,29 @@ body > header#overview li:not(:last-child) {
     padding-right: 0.8em;
     border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
+#metrics li {
+    margin-top: 0.4em;
+    margin-left: 0;
+    font-weight: bold;
+    font-size: 6.0em;
+    line-height: 0.85;
+    color: #CA1F35;
+    list-style: none;
+}
+.fontface #metrics li {
+    margin-top: 0.1em;
+    font-family: "Alegreya";
+    font-size: 7.6em;
+    *font-size: 6.6em;
+    font-size: 6.6em\9;
+}
+#metrics li em {
+    font-size: 1.5em;
+    font-style: normal;
+}
+#summary h1 {
+    font-size: 3.0em;
+}
 #details h1 {
     margin-top: 0.8em;
     font-size: 2.5em;
@@ -295,6 +318,9 @@ body > header#overview li:not(:last-child) {
     body > header#overview li:not(:last-child) {
         padding-right: 0;
         border-right: none;
+    }
+    #metrics li em {
+        display: block;
     }
 }
 @media screen and (max-width: 1023px) {

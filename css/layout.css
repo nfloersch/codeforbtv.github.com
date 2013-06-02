@@ -36,11 +36,16 @@ body > footer > article {
 #overview.banner {
     padding-bottom: 1.0em;
 }
-#participate {
+#producers-partners-sponsors article,
+#credits article {
+    width: 94%;
+    text-align: center;
+}
+#recap {
     background-color: #F5F5F5;
 }
-#participate #hackers,
-#participate #public,
+#metrics,
+#summary,
 #schedule #june-1,
 #schedule #june-2 {
     max-width: 400px;
@@ -49,11 +54,6 @@ body > footer > article {
 #producers-partners-sponsors {
     border-top: 1px solid #AAA;
     border-bottom: 1px solid #AAA;
-}
-#producers-partners-sponsors article,
-#credits article {
-    width: 94%;
-    text-align: center;
 }
 #tracks {
     padding-bottom: 0;
@@ -81,9 +81,12 @@ body > footer a:focus {
     color: #BBB;
 }
 @media screen and (max-width: 599px) {
-    #participate #hackers,
-    #participate #public {
+    #metrics,
+    #summary {
         width: 94%;
+    }
+    #metrics {
+        text-align: center;
     }
 }
 @media screen and (max-width: 767px) {
