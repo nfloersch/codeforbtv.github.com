@@ -290,6 +290,24 @@ body > header#overview li:not(:last-child) {
     *width: 150px;
     height: auto;
 }
+#results > p {
+    text-align: center;
+}
+#results .title {
+    margin-bottom: 0;
+}
+#results .org {
+    margin-top: 0;
+    font-weight: bold;
+}
+#results .contributors,
+#results .contributors a {
+    color: #888;
+}
+#results .contributors {
+    margin-top: 0;
+    font-size: 1.2em;
+}
 #next p,
 #next a,
 #code-for-btv h1,
