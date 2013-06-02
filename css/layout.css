@@ -36,10 +36,20 @@ body > footer > article {
 #overview.banner {
     padding-bottom: 1.0em;
 }
+#next,
+#code-for-btv-meetup {
+    background-color: #CA1F35;
+}
+#next article,
 #producers-partners-sponsors article,
-#credits article {
+#credits article,
+#code-for-btv-meetup article {
     width: 94%;
     text-align: center;
+}
+#next article,
+#code-for-btv-meetup article {
+    text-align: left;
 }
 #recap {
     background-color: #F5F5F5;
@@ -50,6 +60,9 @@ body > footer > article {
 #schedule #june-2 {
     max-width: 400px;
     width: 43%;
+}
+#next article {
+    padding-bottom: 0.4em;
 }
 #producers-partners-sponsors {
     border-top: 1px solid #AAA;
