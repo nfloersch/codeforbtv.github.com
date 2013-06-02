@@ -93,20 +93,15 @@ body > footer a:hover,
 body > footer a:focus {
     color: #BBB;
 }
-@media screen and (max-width: 599px) {
-    #metrics,
-    #summary {
-        width: 94%;
-    }
-    #metrics {
-        text-align: center;
-    }
-}
 @media screen and (max-width: 767px) {
     body > header > article,
     body > section > article,
     body > article > article,
     body > footer > article {
+        width: 94%;
+    }
+    #metrics,
+    #summary {
         width: 94%;
     }
     #schedule #june-1,
