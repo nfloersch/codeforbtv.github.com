@@ -42,6 +42,7 @@ body > footer > article {
 }
 #next article,
 #producers-partners-sponsors article,
+#press article,
 #credits article {
     width: 94%;
     text-align: center;
@@ -65,8 +66,12 @@ body > footer > article {
     border-top: 1px solid #AAA;
     border-bottom: 1px solid #AAA;
 }
-#results {
+#results,
+#press {
     border-bottom: 1px solid #AAA;
+}
+#press {
+    background-color: #F5F5F5;
 }
 #tracks {
     padding-bottom: 0;
