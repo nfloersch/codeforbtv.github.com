@@ -128,6 +128,8 @@ small {
 }
 .button {
     display: inline-block;
+    margin-left: 0.2em;
+    margin-right: 0.2em;
     padding: 0.6em 1.2em;
     background-color: #CA1F35;
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.2)), to(rgba(0, 0, 0, 0.2)));
@@ -356,30 +358,48 @@ body > header#overview.code-for-btv p {
 }
 #next p,
 #next a,
+.next p,
+.next a,
+.callout p,
+.callout a,
 #code-for-btv h1,
 #code-for-btv p,
 #code-for-btv li,
 #code-for-btv a {
     color: white;
 }
-#next p {
+#next p,
+.next p,
+.callout p {
     margin-top: 0;
     font-size: 1.4em;
     text-align: center;
+}
+.next p,
+.callout p {
+    font-size: 1.6em;
 }
 #code-for-btv nav li:not(:last-child) {
     border-right-color: rgba(255, 255, 255, 0.2);
 }
 #next .button,
+.next .button,
+.callout .button,
 #code-for-btv .button {
     background-color: white;
     color: #CA1F35;
 }
-#next .button {
+#next .button,
+.next .button,
+.callout .button {
     padding: 0.4em 0.8em;
 }
 #next .button:hover,
 #next .button:focus,
+.next .button:hover,
+.next .button:focus,
+.callout .button:hover,
+.callout .button:focus,
 #code-for-btv .button:hover,
 #code-for-btv .button:focus {
     background-color: #EEE;
