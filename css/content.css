@@ -307,21 +307,27 @@ body > header#overview li:not(:last-child) {
 #press {
     
 }
-#results > p {
+#results > p,
+#projects > p {
     text-align: center;
 }
-#results .title {
+#results .title,
+#projects .title {
     margin-bottom: 0;
 }
-#results .org {
+#results .org,
+#projects .org {
     margin-top: 0;
     font-weight: bold;
 }
 #results .contributors,
-#results .contributors a {
+#results .contributors a,
+#projects .contributors,
+#projects .contributors a {
     color: #888;
 }
-#results .contributors {
+#results .contributors,
+#projects .contributors {
     margin-top: 0;
     font-size: 1.2em;
 }
