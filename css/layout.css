@@ -37,10 +37,17 @@ body > footer > article {
     padding-bottom: 1.0em;
 }
 #next,
+.next,
 #code-for-btv {
     background-color: #CA1F35;
 }
+.callout {
+    margin-top: 1px;
+    background-color: #666;
+}
 #next article,
+.next article,
+.callout article,
 #producers-partners-sponsors article,
 #press article,
 #credits article {
@@ -58,7 +65,9 @@ body > footer > article {
     max-width: 400px;
     width: 43%;
 }
-#next article {
+#next article,
+.next article,
+.callout article {
     padding-bottom: 0.4em;
     text-align: left;
 }
@@ -67,6 +76,7 @@ body > footer > article {
     border-bottom: 1px solid #AAA;
 }
 #results,
+#projects,
 #press {
     border-bottom: 1px solid #AAA;
 }
@@ -112,7 +122,8 @@ body > footer a:focus {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    #results article {
+    #results article,
+    #projects article {
         width: 43%;
     }
 }
