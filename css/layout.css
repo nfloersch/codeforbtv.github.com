@@ -108,6 +108,12 @@ body > footer a:hover,
 body > footer a:focus {
     color: #BBB;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #results article,
+    #projects article {
+        width: 43%;
+    }
+}
 @media screen and (max-width: 767px) {
     body > header > article,
     body > section > article,
@@ -119,11 +125,5 @@ body > footer a:focus {
     #schedule #june-1,
     #schedule #june-2 {
         width: 94%;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    #results article,
-    #projects article {
-        width: 43%;
     }
 }
