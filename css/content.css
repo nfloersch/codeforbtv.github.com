@@ -413,7 +413,44 @@ body > header#overview.code-for-btv p {
     margin-top: 0;
     font-size: 1.2em;
 }
+@media screen and (max-width: 1023px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    #producers-partners-sponsors nav li:not(:last-child),
+    #press nav li:not(:last-child),
+    #credits nav li:not(:last-child) {
+        margin-right: 0.6em;
+        padding-right: 0.6em;
+    }
+}
+@media screen and (max-width: 799px) {
+    #press nav li {
+        max-width: none;
+        display: block;
+        text-align: left;
+    }
+    #press nav li small {
+        display: inline;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #metrics li em {
+        display: block;
+    }
+}
 @media screen and (max-width: 767px) {
+	body > header#overview.code-for-btv h1 {
+    	font-size: 6.0em;
+    	line-height: 0.9;
+    }
+    body > header#overview li {
+        display: block;
+    }
+    body > header#overview li:not(:last-child) {
+        padding-right: 0;
+        border-right: none;
+    }
     #metrics ul {
         margin-top: 1.2em;
         text-align: center;
@@ -425,17 +462,14 @@ body > header#overview.code-for-btv p {
         white-space: nowrap;
     }
 }
-@media screen and (max-width: 479px) {
-    body > header#overview h1 {
-        margin-top: 0;
-    }
+@media screen and (min-width: 600px) and (max-width: 1023px) {
     body > header#overview.banner h1 img.national-day-of-civic-hacking-logo {
-        max-width: 75%;
+        max-width: 50%;
     }
     #producers-partners-sponsors nav li,
     #press nav li,
     #credits nav li {
-        max-width: 35%;
+        max-width: 20%;
     }
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
@@ -451,48 +485,21 @@ body > header#overview.code-for-btv p {
         max-width: 20%;
     }
 }
-@media screen and (min-width: 600px) and (max-width: 1023px) {
+@media screen (max-width: 599px) {
+	body > header#overview.code-for-btv h1 {
+		font-size: 3.0em;
+	}
+}
+@media screen and (max-width: 479px) {
+    body > header#overview h1 {
+        margin-top: 0;
+    }
     body > header#overview.banner h1 img.national-day-of-civic-hacking-logo {
-        max-width: 50%;
+        max-width: 75%;
     }
     #producers-partners-sponsors nav li,
     #press nav li,
     #credits nav li {
-        max-width: 20%;
-    }
-}
-@media screen and (max-width: 767px) {
-    body > header#overview li {
-        display: block;
-    }
-    body > header#overview li:not(:last-child) {
-        padding-right: 0;
-        border-right: none;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-    #metrics li em {
-        display: block;
-    }
-}
-@media screen and (max-width: 799px) {
-    #press nav li {
-        max-width: none;
-        display: block;
-        text-align: left;
-    }
-    #press nav li small {
-        display: inline;
-    }
-}
-@media screen and (max-width: 1023px) {
-    h1 {
-        font-size: 2.2em;
-    }
-    #producers-partners-sponsors nav li:not(:last-child),
-    #press nav li:not(:last-child),
-    #credits nav li:not(:last-child) {
-        margin-right: 0.6em;
-        padding-right: 0.6em;
+        max-width: 35%;
     }
 }
