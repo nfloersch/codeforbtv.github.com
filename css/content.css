@@ -192,6 +192,8 @@ body > footer > h1 {
     text-align: center;
 }
 body > header#overview h1,
+body > header#overview h2,
+body > header#overview p,
 body > header#overview li,
 body > header#overview a {
     color: white;
@@ -206,6 +208,13 @@ body > header#overview.banner h1 {
     margin-bottom: 0;
     font-size: 4.0em;
 }
+body > header#overview h2,
+body > header#overview p,
+body > header#overview ul {
+    margin-top: 0.2em;
+    text-align: center;
+}
+body > header#overview p,
 body > header#overview li,
 body > header#overview a {
     color: rgba(255, 255, 255, 0.8);
@@ -213,6 +222,29 @@ body > header#overview a {
 body > header#overview a:hover,
 body > header#overview a:focus {
     color: rgba(255, 255, 255, 0.9);
+}
+body > header#overview h2 {
+    font-size: 3.2em;
+}
+body > header#overview p,
+body > header#overview li {
+    font-size: 2.0em;
+    line-height: 1.1;
+}
+body > header#overview ul {
+    margin-top: 0;
+}
+body > header#overview li {
+    display: inline-block;
+    *display: inline;
+    margin-top: 0.2em;
+    margin-left: 0.4em;
+    margin-right: 0.4em;
+    list-style: none;
+}
+body > header#overview li:not(:last-child) {
+    padding-right: 0.8em;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 body > header#overview h1 img.national-day-of-civic-hacking-logo {
     max-width: 100%;
@@ -223,23 +255,14 @@ body > header#overview h1 img.national-day-of-civic-hacking-logo {
 body > header#overview.banner h1 img.national-day-of-civic-hacking-logo {
     max-width: 40%;
 }
-body > header#overview ul {
-    margin-top: 0;
-    text-align: center;
-}
-body > header#overview li {
-    display: inline-block;
-    *display: inline;
+body > header#overview.code-for-btv h1 {
     margin-top: 0.2em;
-    margin-left: 0.4em;
-    margin-right: 0.4em;
-    font-size: 2.0em;
-    line-height: 1.1;
-    list-style: none;
+    font-size: 10.5em;
 }
-body > header#overview li:not(:last-child) {
-    padding-right: 0.8em;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+body > header#overview.code-for-btv h1,
+body > header#overview.code-for-btv h2,
+body > header#overview.code-for-btv p {
+    max-width: 750px;
 }
 #metrics li {
     margin-top: 0.2em;
