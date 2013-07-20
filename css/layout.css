@@ -29,7 +29,8 @@ body > footer > article {
     padding: 0 3% 2.0em;
     vertical-align: top;
 }
-#overview {
+#overview,
+#overview.projects {
     padding-bottom: 4.0em;
     background-color: #4C99D3;
 }
@@ -38,7 +39,8 @@ body > footer > article {
 }
 #next,
 .next,
-#code-for-btv {
+#code-for-btv,
+#overview.projects {
     background-color: #CA1F35;
 }
 .callout {

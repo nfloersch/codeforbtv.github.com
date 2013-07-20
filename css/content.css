@@ -268,6 +268,14 @@ body > header#overview.code-for-btv h2,
 body > header#overview.code-for-btv p {
     max-width: 750px;
 }
+body > header#overview.projects h1 {
+	font-size: 6.8em;
+}
+body > header#overview.projects p {
+	margin-top: 0.6em;
+	font-size: 1.6em;
+	line-height: 1.2;
+}
 #metrics li {
     margin-top: 0.2em;
     margin-left: 0;
