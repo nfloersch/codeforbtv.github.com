@@ -75,8 +75,7 @@ body > footer > article {
     border-top: 1px solid #AAA;
     border-bottom: 1px solid #AAA;
 }
-#results,
-#projects,
+.project-summaries,
 #press {
     border-bottom: 1px solid #AAA;
 }
@@ -109,8 +108,7 @@ body > footer a:focus {
     color: #BBB;
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    #results article,
-    #projects article {
+    .project-summaries article {
         width: 43%;
     }
 }

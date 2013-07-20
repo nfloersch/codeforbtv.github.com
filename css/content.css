@@ -331,27 +331,21 @@ body > header#overview.code-for-btv p {
     *width: 150px;
     height: auto;
 }
-#results > p,
-#projects > p {
+.project-summaries > p {
     text-align: center;
 }
-#results .title,
-#projects .title {
+.project-summaries .title {
     margin-bottom: 0;
 }
-#results .org,
-#projects .org {
+.project-summaries .org {
     margin-top: 0;
     font-weight: bold;
 }
-#results .contributors,
-#results .contributors a,
-#projects .contributors,
-#projects .contributors a {
+.project-summaries .contributors,
+.project-summaries .contributors a {
     color: #888;
 }
-#results .contributors,
-#projects .contributors {
+.project-summaries .contributors {
     margin-top: 0;
     font-size: 1.2em;
 }
