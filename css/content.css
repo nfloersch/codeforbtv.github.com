@@ -32,7 +32,6 @@ h2 a {
 }
 h1,
 h2 {
-    
     line-height: 1.1;
     font-weight: bold;
 }
@@ -260,6 +259,36 @@ body > header#overview h1 img.national-day-of-civic-hacking-logo {
 body > header#overview.banner h1 img.national-day-of-civic-hacking-logo {
     max-width: 40%;
 }
+body > header#overview.hack-the-stacks {
+    background-color: #B54A63;
+}
+body > header#overview.hack-the-stacks h1,
+body > header#overview.hack-the-stacks img {
+    display: inline;
+}
+body > header#overview.hack-the-stacks h1 {
+    margin-top: 0;
+}
+body > header#overview.hack-the-stacks img {
+    max-width: 96%;
+    height: auto;
+    margin: 10px 2%;
+}
+body > #event.hack-the-stacks #about > h1 {
+    max-width: 800px;
+    font-size: 2.5em;
+    color: #B54A63;
+    text-transform: none;
+}
+body > #event.hack-the-stacks #general-public > h1 {
+    margin-top: 7.0em;
+    font-size: 1.8em;
+    color: #00A1E0;
+    text-transform: uppercase;
+}
+body > #event.hack-the-stacks .button {
+    background-color: #B54A63;
+}
 body > header#overview.code-for-btv h1 {
     margin-top: 0.2em;
 }
@@ -323,6 +352,12 @@ body > header#overview.code-for-btv p {
     display: block;
     font-weight: bold;
     color: #888;
+}
+#producers-partners-sponsors nav li a {
+    text-decoration: none;
+}
+#producers-partners-sponsors nav li span {
+    display: block;
 }
 #producers-partners-sponsors nav li img,
 #press nav li img,
@@ -426,6 +461,18 @@ body > header#overview.code-for-btv p {
         padding-right: 0.6em;
     }
 }
+@media screen and (max-width: 767px) {
+    body > header#overview.hack-the-stacks {
+        text-align: left;
+    }
+    body > header#overview.hack-the-stacks h1,
+    body > header#overview.hack-the-stacks h1 img {
+        display: block;
+    }
+    body > #event.hack-the-stacks #general-public > h1 {
+        margin-top: 0;
+    }
+}
 @media screen and (max-width: 799px) {
     #press nav li {
         max-width: none;
@@ -437,6 +484,11 @@ body > header#overview.code-for-btv p {
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+    body > header#overview.hack-the-stacks img {
+        max-width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
     #metrics li em {
         display: block;
     }
@@ -473,6 +525,10 @@ body > header#overview.code-for-btv p {
     #credits nav li {
         max-width: 20%;
     }
+    #producers-partners-sponsors nav ul.in-kind li {
+        max-width: 40%;
+        font-size: 1.2em;
+    }
 }
 @media screen and (min-width: 480px) and (max-width: 599px) {
     body > header#overview h1 {
@@ -485,6 +541,10 @@ body > header#overview.code-for-btv p {
     #press nav li,
     #credits nav li {
         max-width: 20%;
+    }
+    #producers-partners-sponsors nav ul.in-kind li {
+        max-width: 40%;
+        font-size: 1.2em;
     }
 }
 @media screen (max-width: 599px) {
@@ -503,5 +563,9 @@ body > header#overview.code-for-btv p {
     #press nav li,
     #credits nav li {
         max-width: 35%;
+    }
+    #producers-partners-sponsors nav ul.in-kind li {
+        max-width: 55%;
+        font-size: 1.2em;
     }
 }

@@ -36,6 +36,9 @@ body > footer > article {
 #overview.banner {
     padding-bottom: 1.0em;
 }
+#overview.hack-the-stacks {
+    padding-bottom: 1.0em;
+}
 #next,
 .next,
 #code-for-btv {
@@ -59,11 +62,15 @@ body > footer > article {
 }
 #metrics,
 #summary,
+#event.hack-the-stacks article#about,
 #code-for-btv article,
 #schedule #june-1,
 #schedule #june-2 {
     max-width: 400px;
     width: 43%;
+}
+#event.hack-the-stacks article#about {
+    max-width: none;
 }
 #next article,
 .next article,
@@ -121,6 +128,7 @@ body > footer a:focus {
     body > footer > article,
     #metrics,
     #summary,
+    #event.hack-the-stacks article#about,
     #code-for-btv article,
     #schedule #june-1,
     #schedule #june-2 {
