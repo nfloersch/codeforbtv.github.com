@@ -1,4 +1,4 @@
 safe: true
 lsi: false
 pygments: false
-exclude: CNAME, LICENSE.md, README.md
+exclude: [CNAME, LICENSE.md, README.md]
