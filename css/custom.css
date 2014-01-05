@@ -14,6 +14,13 @@ h6,
     font-weight: bold;
     letter-spacing: 0.05em;
 }
+#about-code-for-btv {
+    margin-top: 40px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    background-color: #FAFAFA;
+    border-top: 1px solid #EEE;
+}
 body > footer {
     padding-top: 10px;
     padding-bottom: 25px;
