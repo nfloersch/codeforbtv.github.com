@@ -14,3 +14,8 @@ h6,
     font-weight: bold;
     letter-spacing: 0.05em;
 }
+body > footer {
+    padding-top: 10px;
+    padding-bottom: 25px;
+    background-color: #F1F1F1;
+}
