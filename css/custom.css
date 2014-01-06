@@ -38,6 +38,9 @@ h6,
 .jumbotron a {
     color: white;
 }
+.jumbotron img.code-for-btv-logo.hidden-xs {
+    margin-top: 25px;
+}
 #about-code-for-btv {
     margin-top: 40px;
     padding-top: 50px;
