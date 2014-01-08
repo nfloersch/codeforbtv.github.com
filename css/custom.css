@@ -48,6 +48,9 @@ h6,
     margin-top: 0;
     padding-top: 40px;
 }
+.page-header.code-for-btv-header .text-center.visible-xs h1 small {
+    display: block;
+}
 .page-header.code-for-btv-header img.code-for-btv-logo.hidden-xs {
     margin-top: 10px;
     margin-bottom: 10px;
