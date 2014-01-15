@@ -67,47 +67,47 @@ title: Civic Hacking in Burlington, Vermont
                     </a>
                 </div>
             </div>
-            {% if site.categories.news %}
-                {% assign news_items = site.categories.news | size %}
-                {% assign news_limit = 5 %}
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><a href="/news/">In the News</a></h1>
-                    </div>
-                    <div class="list-group">
-                        {% for post in site.categories.news limit:news_limit %}
-                            {% if post.title %}
-                                {% if post.source %}
-                                    <a href="{{ post.source }}" class="list-group-item">
-                                {% else %}
-                                    <div class="list-group-item">
-                                {% endif %}
-                                    {% if post.published_date and post.publisher %}
-                                        <small>{{ post.published_date }} | <em>{{ post.publisher }}</em></small><br />
-                                    {% elsif post.published_date %}
-                                        <small>{{ post.published_date }}</small><br />
-                                    {% elsif post.publisher %}
-                                        <small><em>{{ post.publisher }}</em></small><br />
-                                    {% endif %}
-                                    {{ post.title }}
-                                    {% if post.source %}
-                                        <i class="fa fa-arrow-circle-right"></i>
-                                    {% endif %}
-                                {% if post.source %}
-                                    </a>
-                                {% else %}
-                                    </div>
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    {% if news_items > news_limit %}
-                        <div class="panel-footer">
-                            <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
-                        </div>
-                    {% endif %}
+{% if site.categories.news %}
+    {% assign news_items = site.categories.news | size %}
+    {% assign news_limit = 5 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title"><a href="/news/">In the News</a></h1>
                 </div>
+                <div class="list-group">
+    {% for post in site.categories.news limit:news_limit %}
+        {% if post.title %}
+            {% if post.source %}
+                    <a href="{{ post.source }}" class="list-group-item">
+            {% else %}
+                    <div class="list-group-item">
             {% endif %}
+            {% if post.published_date and post.publisher %}
+                        <small>{{ post.published_date }} | <em>{{ post.publisher }}</em></small><br />
+            {% elsif post.published_date %}
+                        <small>{{ post.published_date }}</small><br />
+            {% elsif post.publisher %}
+                        <small><em>{{ post.publisher }}</em></small><br />
+            {% endif %}
+                        {{ post.title }}
+            {% if post.source %}
+                        <i class="fa fa-arrow-circle-right"></i>
+            {% endif %}
+            {% if post.source %}
+                    </a>
+            {% else %}
+                    </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+                </div>
+    {% if news_items > news_limit %}
+                <div class="panel-footer">
+                    <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+    {% endif %}
+            </div>
+{% endif %}
         </div>
         <div class="col-sm-8 col-sm-pull-4">
             <article>
