@@ -1,0 +1,63 @@
+---
+permalink: /news/
+layout: default
+title: In the News
+---
+<section class="page-header code-for-btv-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2 col-md-1">
+                <a href="/"><img src="/img/code-for-btv-reversed-500x500.png" alt="Code for BTV" class="code-for-btv-logo img-responsive hidden-xs" /></a>
+                <a href="/"><img src="/img/code-for-btv-reversed-500x500.png" width="100" height="100" alt="Code for BTV" class="code-for-btv-logo img-responsive visible-xs center-block" /></a>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-10 col-md-11 hidden-xs">
+                <h1>In the News</h1>
+            </div>
+            <div class="col-sm-10 col-md-11 visible-xs text-center">
+                <h1>In the News</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        {% if site.categories.news %}
+            {% for post in site.categories.news %}
+                {% if post.title %}
+                    {% cycle 'row open': '<div class="row">', '', '', '' %}
+                        <div class="col-sm-6 col-md-3">
+                            <h1 class="h4">
+                                {% if post.published_date and post.publisher %}
+                                    <small>{{ post.published_date }} | <em>{{ post.publisher }}</em></small><br />
+                                {% elsif post.published_date %}
+                                    <small>{{ post.published_date }}</small><br />
+                                {% elsif post.publisher %}
+                                    <small><em>{{ post.publisher }}</em></small><br />
+                                {% endif %}
+                                {% if post.source %}
+                                    <a href="{{ post.source }}">{{ post.title }}</a>
+                                {% else %}
+                                    {{ post.title }}
+                                {% endif %}
+                            </h1>
+                        </div>
+                        {% cycle 'row clearfix': '', '<div class="clearfix visible-sm"></div>', '', '' %}
+                    {% cycle 'row close': '', '', '', '</div>' %}
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="row">
+                <div class="col-md-6 col-md-push-3">
+                    <div class="alert alert-warning text-center">
+                        <p>
+                            <i class="fa fa-exclamation-triangle fa-4x"></i><br />
+                            We seem to be experiencing a technical difficulty.<br />
+                            <strong>Please try again later.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</section>
