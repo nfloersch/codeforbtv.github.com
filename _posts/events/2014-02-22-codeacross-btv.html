@@ -2,6 +2,11 @@
 category: events
 layout: default
 title: CodeAcross BTV
+time:
+ - dtstart: 2014-02-22 10:00:00 -0500
+   dtend: 2014-02-22 18:00:00 -0500
+ - dtstart: 2014-02-23 12:00:00 -0500
+   dtend: 2014-02-23 18:00:00 -0500
 ---
 <section class="page-header code-for-btv-header">
     <div class="container">
@@ -59,11 +64,10 @@ title: CodeAcross BTV
                 </div>
                 <div class="list-group">
                     <div class="list-group-item">
+{% if page.time or page.time_notes %}
                         <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
-                        <ul class="list-unstyled">
-                            <li>Saturday, February 22, 2014, 10am-6pm</li>
-                            <li>Sunday, February 23, 2014, 12pm-6pm</li>
-                        </ul>
+                        {% include event_time.html %}
+{% endif %}
                         <h2 class="list-group-item-heading h4"><i class="fa fa-map-marker"></i> Where <small><a href="http://www.fletcherfree.org/about.html#Directions">[Directions]</a></small></h2>
                         <address>
                             <a href="http://www.fletcherfree.org/">Fletcher Free Library</a><br />
