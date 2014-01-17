@@ -39,36 +39,50 @@ title: Events
                 <p>{{ post.description }} <a href="{{ post.url }}">More <i class="fa fa-arrow-circle-right"></i></a></p>
             </div>
             {% endif %}
-            {% if post.time %}
+            {% if post.time or post.registration_required %}
             <div class="panel-footer">
-                <ul class="list-inline">
-                {% for time in post.time %}
-                    {% if time.dtstart %}
+                {% if post.time %}
+                <ul class="list-inline pull-left">
+                    {% for time in post.time %}
+                        {% if time.dtstart %}
                     <li><i class="fa fa-calendar"></i>
-                        {% if time.display_hoursminutes != false %}
+                            {% if time.display_hoursminutes != false %}
                         {{ time.dtstart | date: '%a, %b %-d, %Y' }} <small>{{ time.dtstart | date: '%I:%M %p' }}</small>
-                        {% else %}
-                        {{ time.dtstart | date: '%a, %b %-d, %Y' }}
-                        {% endif %}
-                        {% if time.dtend %}
-                            {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
-                            {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
-                            {% if dtstart_string == dtend_string %}
-                                {% if time.display_hoursminutes != false %}
-                        <small> - {{ time.dtend | date: '%I:%M %p' }}</small>
-                                {% endif %}
                             {% else %}
-                                {% if time.display_hoursminutes != false %}
-                        - {{ time.dtend | date: '%a, %b %-d, %Y' }} <small>{{ time.dtend | date: '%I:%M %p' }}</small>
+                        {{ time.dtstart | date: '%a, %b %-d, %Y' }}
+                            {% endif %}
+                            {% if time.dtend %}
+                                {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
+                                {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
+                                {% if dtstart_string == dtend_string %}
+                                    {% if time.display_hoursminutes != false %}
+                        <small> - {{ time.dtend | date: '%I:%M %p' }}</small>
+                                    {% endif %}
                                 {% else %}
+                                    {% if time.display_hoursminutes != false %}
+                        - {{ time.dtend | date: '%a, %b %-d, %Y' }} <small>{{ time.dtend | date: '%I:%M %p' }}</small>
+                                    {% else %}
                         - {{ time.dtend | date: '%a, %b %-d, %Y' }}
+                                    {% endif %}
                                 {% endif %}
                             {% endif %}
-                        {% endif %}
                     </li>
-                    {% endif %}
-                {% endfor %}
+                        {% endif %}
+                    {% endfor %}
                 </ul>
+                {% endif %}
+                {% if post.registration_required %}
+                    {% if post.registration_required %}
+                <div class="pull-right">
+                        {% if post.registration_url %}
+                    <a href="{{ post.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>
+                        {% else %}
+                    <button class="btn btn-primary btn-sm" disabled="disabled"><i class="fa fa-ticket"></i> Register</button>
+                        {% endif %}
+                </div>
+                    {% endif %}
+                {% endif %}
+                <div class="clearfix"></div>
             </div>
             {% endif %}
         </div>

@@ -8,6 +8,9 @@ time:
    dtend: 2014-02-22 18:00:00 -0500
  - dtstart: 2014-02-23 12:00:00 -0500
    dtend: 2014-02-23 18:00:00 -0500
+registration_required: true
+registration_description: Please register to attend this hackathon. <span class='text-muted'><strong>Don't fret—it's free!</strong></span>
+registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110900977
 ---
 <section class="page-header code-for-btv-header">
     <div class="container">
@@ -77,11 +80,19 @@ time:
                         </address>
                         <p class="text-muted"><i class="fa fa-wheelchair"></i> The venue is handicapped accessible.</p>
                     </div>
+{% if page.registration_required %}
                     <div class="list-group-item">
                         <h2 class="list-group-item-heading h4">Register to Attend</h2>
-                        <p>Please register to attend this hackathon. <span class="text-muted"><strong>Don't fret—it's free!</strong></span></p>
-                        <p><a href="https://www.eventbrite.com/e/codeacross-btv-registration-10110900977" class="btn btn-primary"><i class="fa fa-ticket"></i> Register</a></p>
+    {% if page.registration_description %}
+                        <p>{{ page.registration_description }}</p>
+    {% endif %}
+    {% if page.registration_url %}
+                        <p><a href="{{ page.registration_url }}" class="btn btn-primary"><i class="fa fa-ticket"></i> Register</a></p>
+    {% else %}
+                        <p><button class="btn btn-primary" disabled="disabled"><i class="fa fa-ticket"></i> Register</button> <span class="text-primary">Registration available soon!</span></p>
+    {% endif %}
                     </div>
+{% endif %}
                 </div>
             </div>
             <div class="panel panel-default">
