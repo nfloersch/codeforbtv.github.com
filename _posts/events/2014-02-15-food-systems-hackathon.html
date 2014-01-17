@@ -2,6 +2,8 @@
 category: events
 layout: default
 title: Food Systems Hackathon at the NOFA-VT Winter Conference
+head: Food Systems Hackathon
+subhead: at the NOFA-VT Winter Conference
 description: Code for BTV is organizing a food systems hackathon to coincide with the upcoming NOFA-VT Winter Conference in Burlington. The hackathon will bring together software developers, designers, makers and others to build software/hardware prototypes.
 time:
  - dtstart: 2014-02-15 00:00:00 -0500
@@ -21,10 +23,10 @@ registration_description: Participants <strong>must</strong> register by <strong
             </div>
             <div class="clearfix visible-xs"></div>
             <div class="col-sm-10 col-md-11 hidden-xs">
-                <h1>Food Systems Hackathon <small>at the NOFA-VT Winter Conference</small></h1>
+                <h1>{{ page.head }}{% if page.subhead %} <small>{{ page.subhead }}</small>{% endif %}</h1>
             </div>
             <div class="col-sm-10 col-md-11 visible-xs text-center">
-                <h1>Food Systems Hackathon <small>at the NOFA-VT Winter Conference</small></h1>
+                <h1>{{ page.head }}{% if page.subhead %} <small>{{ page.subhead }}</small>{% endif %}</h1>
             </div>
         </div>
     </div>
