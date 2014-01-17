@@ -2,6 +2,12 @@
 category: events
 layout: default
 title: Food Systems Hackathon at the NOFA-VT Winter Conference
+time:
+ - dtstart: 2014-02-15 00:00:00 -0500
+   display_hoursminutes: false
+ - dtstart: 2014-02-16 00:00:00 -0500
+   display_hoursminutes: false
+time_notes: Detailed schedule to follow.
 ---
 <section class="page-header code-for-btv-header">
     <div class="container">
@@ -53,12 +59,10 @@ title: Food Systems Hackathon at the NOFA-VT Winter Conference
                 </div>
                 <div class="list-group">
                     <div class="list-group-item">
+{% if page.time or page.time_notes %}
                         <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
-                        <ul class="list-unstyled">
-                            <li>Saturday, February 15, 2014</li>
-                            <li>Sunday, February 16, 2014</li>
-                        </ul>
-                        <p class="text-muted"><small>Detailed schedule to follow.</small></p>
+                        {% include event_time.html %}
+{% endif %}
                         <h2 class="list-group-item-heading h4"><i class="fa fa-map-marker"></i> Where <small><a href="http://www.uvm.edu/~davis/?Page=directions.php&amp;SM=menu_contact.html">[Directions]</a></small></h2>
                         <address>
                             <a href="http://www.uvm.edu/~davis/">Dudley H. Davis Center</a><br />

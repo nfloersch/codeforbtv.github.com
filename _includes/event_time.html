@@ -1,0 +1,33 @@
+{% if page.time %}
+<ul class="list-unstyled">
+    {% for time in page.time %}
+        {% if time.dtstart %}
+    <li>
+            {% if time.display_hoursminutes != false %}
+        {{ time.dtstart | date: '%a, %b %-d, %Y, %I:%M %p' }}
+            {% else %}
+        {{ time.dtstart | date: '%a, %b %-d, %Y' }}
+            {% endif %}
+            {% if time.dtend %}
+                {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
+                {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
+                {% if dtstart_string == dtend_string %}
+                    {% if time.display_hoursminutes != false %}
+        - {{ time.dtend | date: '%I:%M %p' }}
+                    {% endif %}
+                {% else %}
+                    {% if time.display_hoursminutes != false %}
+        - {{ time.dtend | date: '%a, %b %-d, %Y, %I:%M %p' }}
+                    {% else %}
+        - {{ time.dtend | date: '%a, %b %-d, %Y' }}
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+    </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+{% if page.time_notes %}
+<p class="text-muted"><small>{{ page.time_notes }}</small></p>
+{% endif %}
