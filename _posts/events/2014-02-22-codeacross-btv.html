@@ -10,6 +10,13 @@ time:
    dtend: 2014-02-22 18:00:00 -0500
  - dtstart: 2014-02-23 12:00:00 -0500
    dtend: 2014-02-23 18:00:00 -0500
+venue:
+ - text: Fletcher Free Library
+   link: http://www.fletcherfree.org/
+ - text: 235 College Street
+ - text: Burlington, VT 05401
+venue_directions_url: http://www.fletcherfree.org/about.html#Directions
+venue_notes: <i class="fa fa-wheelchair"></i> The venue is handicapped accessible.
 registration_required: true
 registration_description: Please register to attend this hackathon. <span class='text-muted'><strong>Don't fret—it's free!</strong></span>
 registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110900977
@@ -74,13 +81,17 @@ registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110
                         <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
                         {% include events_time.html %}
 {% endif %}
-                        <h2 class="list-group-item-heading h4"><i class="fa fa-map-marker"></i> Where <small><a href="http://www.fletcherfree.org/about.html#Directions">[Directions]</a></small></h2>
-                        <address>
-                            <a href="http://www.fletcherfree.org/">Fletcher Free Library</a><br />
-                            235 College Street<br />
-                            Burlington, VT 05401
-                        </address>
-                        <p class="text-muted"><i class="fa fa-wheelchair"></i> The venue is handicapped accessible.</p>
+{% if page.venue or page.venue_notes %}
+                        <h2 class="list-group-item-heading h4">
+                            <i class="fa fa-map-marker"></i> Where
+    {% if page.venue_directions_url %}
+                            <small>
+                                | <a href="{{ page.venue_directions_url }}">Directions</a>
+                            </small>
+    {% endif %}
+                        </h2>
+                        {% include events_venue.html %}
+{% endif %}
                     </div>
 {% if page.registration_required %}
                     <div class="list-group-item">

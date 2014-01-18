@@ -39,13 +39,14 @@ title: Events
                 <p>{{ post.description }} <small><a href="{{ post.url }}">Read More <i class="fa fa-arrow-circle-right"></i></a></small></p>
             </div>
             {% endif %}
-            {% if post.time or post.registration_required %}
+            {% if post.time or post.venue or post.registration_required %}
             <div class="panel-footer">
                 {% if post.time %}
                 <ul class="list-inline pull-left">
                     {% for time in post.time %}
                         {% if time.dtstart %}
-                    <li><i class="fa fa-calendar"></i>
+                    <li>
+                        <i class="fa fa-calendar"></i>
                             {% if time.display_hoursminutes != false %}
                         {{ time.dtstart | date: '%a, %b %-d, %Y' }} <small>{{ time.dtstart | date: '%I:%M %p' }}</small>
                             {% else %}
@@ -69,6 +70,21 @@ title: Events
                     </li>
                         {% endif %}
                     {% endfor %}
+                </ul>
+                {% endif %}
+                <div class="clearfix"></div>
+                {% if post.venue %}
+                <ul class="list-inline pull-left">
+                    <li>
+                    {% for line in post.venue %}
+                        {% if forloop.first %}
+                        <i class="fa fa-map-marker"></i>
+                        {{ line.text }}
+                        {% else %}
+                        <small>{% unless forloop.first %} | {% endunless %}{{ line.text }}</small>
+                        {% endif %}
+                    {% endfor %}
+                    </li>
                 </ul>
                 {% endif %}
                 {% if post.registration_required %}
