@@ -20,6 +20,9 @@ venue_notes: <i class="fa fa-wheelchair"></i> The venue is handicapped accessibl
 registration_required: true
 registration_description: Please register to attend this hackathon. <span class='text-muted'><strong>Don't fret—it's free!</strong></span>
 registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110900977
+sidebar:
+ - heading: Sponsor this Event
+   text: Please [email us](mailto:info@codeforbtv.org) if you're interested in sponsoring CodeAcross BTV.
 ---
 <section class="page-header code-for-btv-header">
     <div class="container">
@@ -122,14 +125,22 @@ registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110
 {% endif %}
                 </div>
             </div>
-            <div class="panel panel-default">
+{% if page.sidebar %}
+    {% for node in page.sidebar %}
+            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
+        {% if node.heading %}
                 <div class="panel-heading">
-                    <h1 class="panel-title">Sponsor this Event</h1>
+                    <h1 class="panel-title">{{ node.heading }}</h1>
                 </div>
+        {% endif %}
+        {% if node.text %}
                 <div class="panel-body">
-                    <p>Please <a href="mailto:info@codeforbtv.org">email us</a> if you're interested in sponsoring CodeAcross BTV.</p>
+                    {{ node.text | markdownify }}
                 </div>
+        {% endif %}
             </div>
+    {% endfor %}
+{% endif %}
         </div>
     </div>
 </section>
