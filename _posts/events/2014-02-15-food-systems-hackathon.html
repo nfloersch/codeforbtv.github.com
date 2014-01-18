@@ -26,100 +26,25 @@ sidebar:
  - heading: Sponsor this Event
    text: Please [email us](mailto:info@codeforbtv.org) if you're interested in sponsoring this event.
 ---
-<section class="container">
-    <div class="row">
-        <div class="col-sm-8">
-            <article>
-                <h1>How Can Technology Help Vermont's Food System?</h1>
-                <p class="lead">{{ page.description }}</p>
-                <p>Those who might be interested in participating include:</p>
-                <ul>
-                    <li>Civic hackers, developers, designers and makers</li>
-                    <li>Organic enthusiasts, farmers and gardeners</li>
-                    <li>Policy makers</li>
-                    <li>Researchers</li>
-                    <li>Students</li>
-                </ul>
-                <h2>Participate in the Workshop</h2>
-                <p>Code for BTV will facilitate a workshop between food systems domain experts and technologists at the beginning of the NOFA-VT Winter Conference to kickoff the two-day hackathon. This workshop will give hackathon participants an opportunity to discover what problems organic enthusiasts, farmers, gardeners and consumers face while trying to develop an economically viable and ecologically sound Vermont food system. <strong>Hackathon participants are strongly encouraged to attend this workshop,</strong> as it is an opportunity to communicate directly with domain experts knowledgeable about food systems.</p>
-            </article>
-            <article>
-                <h1>Producers</h1>
-                <ol class="list-inline">
-                    <li><a href="http://nofavt.org/">NOFA-VT</a></li>
-                    <li><a href="http://www.uvm.edu/~ovpr/">Office of the UVM Vice President for Research</a></li>
-                    <li><a href="http://foundline.com/">Found Line</a></li>
-                </ol>
-            </article>
-        </div>
-        <div class="col-sm-4">
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h1 class="panel-title">About the Event</h1>
-                </div>
-                <div class="list-group">
-                    <div class="list-group-item">
-{% if page.time or page.time_notes %}
-                        <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
-                        {% include events_time.html %}
-{% endif %}
-{% if page.venue or page.venue_notes %}
-                        <h2 class="list-group-item-heading h4">
-                            <i class="fa fa-map-marker"></i> Where
-    {% if page.venue_directions_url %}
-                            <small>
-                                | <a href="{{ page.venue_directions_url }}">Directions</a>
-                            </small>
-    {% endif %}
-                        </h2>
-                        {% include events_venue.html %}
-{% endif %}
-                    </div>
-{% if page.registration_required %}
-                    <div class="list-group-item">
-                        <h2 class="list-group-item-heading h4">Register to Attend</h2>
-    {% if page.registration_description %}
-                        <p>{{ page.registration_description }}</p>
-    {% endif %}
-    {% if page.registration_url %}
-                        <p>
-                            <a href="{{ page.registration_url }}" class="btn btn-primary">
-                                <i class="fa fa-ticket"></i> Register
-                            </a>
-        {% if page.registration_note %}
-                            <span class="text-primary">{{ page.registration_note }}</span>
-        {% endif %}
-                        </p>
-    {% else %}
-                        <p>
-                            <button class="btn btn-primary" disabled="disabled">
-                                <i class="fa fa-ticket"></i> Register
-                            </button>
-        {% if page.registration_note %}
-                            <span class="text-primary">{{ page.registration_note }}</span>
-        {% endif %}
-                        </p>
-    {% endif %}
-                    </div>
-{% endif %}
-                </div>
-            </div>
-{% if page.sidebar %}
-    {% for node in page.sidebar %}
-            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
-        {% if node.heading %}
-                <div class="panel-heading">
-                    <h1 class="panel-title">{{ node.heading }}</h1>
-                </div>
-        {% endif %}
-        {% if node.text %}
-                <div class="panel-body">
-                    {{ node.text | markdownify }}
-                </div>
-        {% endif %}
-            </div>
-    {% endfor %}
-{% endif %}
-        </div>
-    </div>
-</section>
+<article>
+    <h1>How Can Technology Help Vermont's Food System?</h1>
+    <p class="lead">{{ page.description }}</p>
+    <p>Those who might be interested in participating include:</p>
+    <ul>
+        <li>Civic hackers, developers, designers and makers</li>
+        <li>Organic enthusiasts, farmers and gardeners</li>
+        <li>Policy makers</li>
+        <li>Researchers</li>
+        <li>Students</li>
+    </ul>
+    <h2>Participate in the Workshop</h2>
+    <p>Code for BTV will facilitate a workshop between food systems domain experts and technologists at the beginning of the NOFA-VT Winter Conference to kickoff the two-day hackathon. This workshop will give hackathon participants an opportunity to discover what problems organic enthusiasts, farmers, gardeners and consumers face while trying to develop an economically viable and ecologically sound Vermont food system. <strong>Hackathon participants are strongly encouraged to attend this workshop,</strong> as it is an opportunity to communicate directly with domain experts knowledgeable about food systems.</p>
+</article>
+<article>
+    <h1>Producers</h1>
+    <ol class="list-inline">
+        <li><a href="http://nofavt.org/">NOFA-VT</a></li>
+        <li><a href="http://www.uvm.edu/~ovpr/">Office of the UVM Vice President for Research</a></li>
+        <li><a href="http://foundline.com/">Found Line</a></li>
+    </ol>
+</article>
