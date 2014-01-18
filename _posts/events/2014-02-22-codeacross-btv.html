@@ -89,9 +89,23 @@ registration_url: https://www.eventbrite.com/e/codeacross-btv-registration-10110
                         <p>{{ page.registration_description }}</p>
     {% endif %}
     {% if page.registration_url %}
-                        <p><a href="{{ page.registration_url }}" class="btn btn-primary"><i class="fa fa-ticket"></i> Register</a></p>
+                        <p>
+                            <a href="{{ page.registration_url }}" class="btn btn-primary">
+                                <i class="fa fa-ticket"></i> Register
+                            </a>
+        {% if page.registration_note %}
+                            <span class="text-primary">{{ page.registration_note }}</span>
+        {% endif %}
+                        </p>
     {% else %}
-                        <p><button class="btn btn-primary" disabled="disabled"><i class="fa fa-ticket"></i> Register</button> <span class="text-primary">Registration available soon!</span></p>
+                        <p>
+                            <button class="btn btn-primary" disabled="disabled">
+                                <i class="fa fa-ticket"></i> Register
+                            </button>
+        {% if page.registration_note %}
+                            <span class="text-primary">{{ page.registration_note }}</span>
+        {% endif %}
+                        </p>
     {% endif %}
                     </div>
 {% endif %}

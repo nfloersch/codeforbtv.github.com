@@ -13,6 +13,7 @@ time:
 time_notes: Detailed schedule to follow.
 registration_required: true
 registration_description: Participants <strong>must</strong> register by <strong>February 1</strong> to attend this hackathon. <span class='text-muted'><strong>Don't fret—it's free!</strong> Lunch will be provided.</span>
+registration_note: Registration available soon!
 ---
 <section class="page-header code-for-btv-header">
     <div class="container">
@@ -85,9 +86,23 @@ registration_description: Participants <strong>must</strong> register by <strong
                         <p>{{ page.registration_description }}</p>
     {% endif %}
     {% if page.registration_url %}
-                        <p><a href="{{ page.registration_url }}" class="btn btn-primary"><i class="fa fa-ticket"></i> Register</a></p>
+                        <p>
+                            <a href="{{ page.registration_url }}" class="btn btn-primary">
+                                <i class="fa fa-ticket"></i> Register
+                            </a>
+        {% if page.registration_note %}
+                            <span class="text-primary">{{ page.registration_note }}</span>
+        {% endif %}
+                        </p>
     {% else %}
-                        <p><button class="btn btn-primary" disabled="disabled"><i class="fa fa-ticket"></i> Register</button> <span class="text-primary">Registration available soon!</span></p>
+                        <p>
+                            <button class="btn btn-primary" disabled="disabled">
+                                <i class="fa fa-ticket"></i> Register
+                            </button>
+        {% if page.registration_note %}
+                            <span class="text-primary">{{ page.registration_note }}</span>
+        {% endif %}
+                        </p>
     {% endif %}
                     </div>
 {% endif %}
