@@ -87,7 +87,7 @@ title: Events
                     </li>
                 </ul>
                 {% endif %}
-                {% if post.registration_required %}
+                {% if post.registration_required and post.registration_archived != true %}
                 <div class="pull-right">
                     {% if post.registration_url %}
                     <a href="{{ post.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>

@@ -46,7 +46,7 @@ layout: default
                         {% include events_venue.html %}
 {% endif %}
                     </div>
-{% if page.registration_required %}
+{% if page.registration_required and page.registration_archived != true %}
                     <div class="list-group-item">
                         <h2 class="list-group-item-heading h4">Register to Attend</h2>
     {% if page.registration_description %}
