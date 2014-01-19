@@ -88,15 +88,13 @@ title: Events
                 </ul>
                 {% endif %}
                 {% if post.registration_required %}
-                    {% if post.registration_required %}
                 <div class="pull-right">
-                        {% if post.registration_url %}
+                    {% if post.registration_url %}
                     <a href="{{ post.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>
-                        {% else %}
+                    {% else %}
                     <button class="btn btn-primary btn-sm" disabled="disabled"><i class="fa fa-ticket"></i> Register</button>
-                        {% endif %}
-                </div>
                     {% endif %}
+                </div>
                 {% endif %}
                 <div class="clearfix"></div>
             </div>
