@@ -6,22 +6,22 @@ title: In the News
 <section>
     <div class="container">
 {% if site.categories.news %}
-    {% for post in site.categories.news %}
-        {% if post.title %}
+    {% for news_item in site.categories.news %}
+        {% if news_item.title %}
         {% cycle 'row open': '<div class="row">', '', '', '' %}
             <div class="col-sm-6 col-md-3">
                 <h1 class="h4">
-            {% if post.published_date and post.publisher %}
-                    <small>{{ post.published_date }} | <em>{{ post.publisher }}</em></small><br />
-            {% elsif post.published_date %}
-                    <small>{{ post.published_date }}</small><br />
-            {% elsif post.publisher %}
-                    <small><em>{{ post.publisher }}</em></small><br />
+            {% if news_item.published_date and news_item.publisher %}
+                    <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+            {% elsif news_item.published_date %}
+                    <small>{{ news_item.published_date }}</small><br />
+            {% elsif news_item.publisher %}
+                    <small><em>{{ news_item.publisher }}</em></small><br />
             {% endif %}
-            {% if post.source %}
-                    <a href="{{ post.source }}">{{ post.title }}</a>
+            {% if news_item.source %}
+                    <a href="{{ news_item.source }}">{{ news_item.title }}</a>
             {% else %}
-                    {{ post.title }}
+                    {{ news_item.title }}
             {% endif %}
                 </h1>
             </div>
