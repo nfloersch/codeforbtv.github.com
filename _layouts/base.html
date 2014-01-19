@@ -19,6 +19,9 @@
     <![endif]-->
 </head>
 <body>
+{% unless page.include_page_header == false %}
+    {% include page-header.html %}
+{% endunless %}
     {{ content }}
     {% include about-code-for-btv.html %}
     {% include page-footer.html %}
