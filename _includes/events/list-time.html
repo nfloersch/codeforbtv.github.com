@@ -10,26 +10,7 @@
             {% if param_events_list_time_class contains "list-inline" %}
                 <i class="fa fa-calendar"></i>
             {% endif %}
-            {% if time.display_hoursminutes != false %}
-        {{ time.dtstart | date: '%a, %b %-d, %Y' }} <small>{{ time.dtstart | date: '%I:%M %p' }}</small>
-            {% else %}
-        {{ time.dtstart | date: '%a, %b %-d, %Y' }}
-            {% endif %}
-            {% if time.dtend %}
-                {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
-                {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
-                {% if dtstart_string == dtend_string %}
-                    {% if time.display_hoursminutes != false %}
-        <small> - {{ time.dtend | date: '%I:%M %p' }}</small>
-                    {% endif %}
-                {% else %}
-                    {% if time.display_hoursminutes != false %}
-        - {{ time.dtend | date: '%a, %b %-d, %Y' }} <small>{{ time.dtend | date: '%I:%M %p' }}</small>
-                    {% else %}
-        - {{ time.dtend | date: '%a, %b %-d, %Y' }}
-                    {% endif %}
-                {% endif %}
-            {% endif %}
+            {% include helpers/dtstart-to-dtend.html %}
     </li>
         {% endif %}
     {% endfor %}

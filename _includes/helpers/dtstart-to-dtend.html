@@ -1,0 +1,27 @@
+{% if param_time_format == "date" %}
+    {% assign date_format = "%b %-d" %}
+    {% assign time_format = nil %}
+{% else %}
+    {% assign date_format = "%a, %b %-d, %Y" %}
+    {% assign time_format = "%-I:%M%p" %}
+{% endif %}
+{% if time.display_hoursminutes != false %}
+{{ time.dtstart | date: date_format }}{% if time_format %} <small>{{ time.dtstart | date: time_format }}</small>{% endif %}
+{% else %}
+{{ time.dtstart | date: date_format }}
+{% endif %}
+{% if time.dtend %}
+    {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
+    {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
+    {% if dtstart_string == dtend_string %}
+        {% if time.display_hoursminutes != false %}
+{% if time_format %}<small> - {{ time.dtend | date: time_format }}</small>{% endif %}
+        {% endif %}
+    {% else %}
+        {% if time.display_hoursminutes != false %}
+- {{ time.dtend | date: date_format }}{% if time_format %} <small>{{ time.dtend | date: time_format }}</small>{% endif %}
+        {% else %}
+- {{ time.dtend | date: date_format }}
+        {% endif %}
+    {% endif %}
+{% endif %}

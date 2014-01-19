@@ -25,6 +25,7 @@ title: Events
             {% if event.time or event.venue or event.registration_required %}
             <div class="panel-footer">
                 {% assign param_events_list_time_class = "list-inline pull-left" %}
+                {% assign param_time_format = "date-time" %}
                 {% include events/list-time.html %}
                 <div class="clearfix"></div>
                 {% if event.venue %}

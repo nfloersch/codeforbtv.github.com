@@ -22,6 +22,7 @@
             <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
             {% assign event = page %}
             {% assign param_events_list_time_class = "list-unstyled" %}
+            {% assign param_time_format = "date-time" %}
             {% include events/list-time.html %}
             {% if page.time_notes %}
             <p class="text-muted"><small>{{ page.time_notes }}</small></p>
