@@ -7,6 +7,15 @@ title: Events
     <div class="container">
 {% if site.categories.events %}
     {% for event in site.categories.events %}
+        {% if event.time %}
+            {% assign has_time = true %}
+        {% endif %}
+        {% if event.venue %}
+            {% assign has_venue = true %}
+        {% endif %}
+        {% if event.registration_required and event.registration_archived != true %}
+            {% assign has_registration = true %}
+        {% endif %}
         {% if event.title %}
         <div class="panel panel-info">
             <div class="panel-heading">
@@ -22,13 +31,13 @@ title: Events
                 <p>{{ event.description }} <small><a href="{{ event.url }}">Read More <i class="fa fa-arrow-circle-right"></i></a></small></p>
             </div>
             {% endif %}
-            {% if event.time or event.venue or event.registration_required %}
+            {% if has_time or has_venue or has_registration %}
             <div class="panel-footer">
                 {% assign param_events_list_time_class = "list-inline pull-left" %}
                 {% assign param_time_format = "date-time" %}
                 {% include events/list-time.html %}
                 <div class="clearfix"></div>
-                {% if event.venue %}
+                {% if has_venue %}
                 <ul class="list-inline pull-left">
                     <li>
                     {% for line in event.venue %}
@@ -42,7 +51,7 @@ title: Events
                     </li>
                 </ul>
                 {% endif %}
-                {% if event.registration_required and event.registration_archived != true %}
+                {% if has_registration %}
                 <div class="pull-right">
                     {% if event.registration_url %}
                     <a href="{{ event.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>
