@@ -20,6 +20,7 @@
         <div class="list-group-item">
         {% if has_time %}
             <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
+            {% assign event = page %}
             {% assign param_events_list_time_class = "list-unstyled" %}
             {% include events/list-time.html %}
             {% if page.time_notes %}

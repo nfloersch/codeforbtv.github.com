@@ -1,12 +1,15 @@
-{% if page.time %}
+{% if event.time %}
     {% if param_events_list_time_class %}
 <ul class="{{ param_events_list_time_class }}">
     {% else %}
 <ul>
     {% endif %}
-    {% for time in page.time %}
+    {% for time in event.time %}
         {% if time.dtstart %}
     <li>
+            {% if param_events_list_time_class contains "list-inline" %}
+                <i class="fa fa-calendar"></i>
+            {% endif %}
             {% if time.display_hoursminutes != false %}
         {{ time.dtstart | date: '%a, %b %-d, %Y' }} <small>{{ time.dtstart | date: '%I:%M %p' }}</small>
             {% else %}
