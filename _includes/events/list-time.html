@@ -1,5 +1,9 @@
 {% if page.time %}
-<ul class="list-unstyled">
+    {% if param_events_list_time_class %}
+<ul class="{{ param_events_list_time_class }}">
+    {% else %}
+<ul>
+    {% endif %}
     {% for time in page.time %}
         {% if time.dtstart %}
     <li>
