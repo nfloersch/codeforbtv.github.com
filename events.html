@@ -36,8 +36,8 @@ title: Events
                 {% assign param_events_list_time_class = "list-inline pull-left" %}
                 {% assign param_time_format = "date-time" %}
                 {% include events/list-time.html %}
-                <div class="clearfix"></div>
                 {% if has_venue %}
+                <div class="clearfix"></div>
                 <ul class="list-inline pull-left">
                     <li>
                     {% for line in event.venue %}
