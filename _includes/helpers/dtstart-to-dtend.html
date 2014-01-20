@@ -11,8 +11,8 @@
 {{ time.dtstart | date: date_format }}
 {% endif %}
 {% if time.dtend %}
-    {% capture dtstart_string %}{{ time.dtstart | date: '%Y-%m-%d' }}{% endcapture %}
-    {% capture dtend_string %}{{ time.dtend | date: '%Y-%m-%d' }}{% endcapture %}
+    {% capture dtstart_string %}{{ time.dtstart | date: "%Y-%m-%d" }}{% endcapture %}
+    {% capture dtend_string %}{{ time.dtend | date: "%Y-%m-%d" }}{% endcapture %}
     {% if dtstart_string == dtend_string %}
         {% if time.display_hoursminutes != false %}
 {% if time_format %}<small> - {{ time.dtend | date: time_format }}</small>{% endif %}
