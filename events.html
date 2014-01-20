@@ -7,12 +7,15 @@ title: Events
     <div class="container">
 {% if site.categories.events %}
     {% for event in site.categories.events %}
+        {% assign has_time = false %}
         {% if event.time %}
             {% assign has_time = true %}
         {% endif %}
+        {% assign has_venue = false %}
         {% if event.venue %}
             {% assign has_venue = true %}
         {% endif %}
+        {% assign has_registration = false %}
         {% if event.registration_required and event.registration_archived != true %}
             {% assign has_registration = true %}
         {% endif %}
