@@ -67,3 +67,11 @@ body > footer {
     padding-bottom: 25px;
     background-color: #F1F1F1;
 }
+.sponsors img {
+    max-width: 60%;
+    max-height: 80px;
+}
+.sponsors .list-group-item {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
