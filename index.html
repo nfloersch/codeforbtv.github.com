@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: base
 title: Civic Hacking in Burlington, Vermont
+include_page_header: false
 ---
 <header class="jumbotron code-for-btv-header">
     <div class="container">
@@ -20,23 +21,44 @@ title: Civic Hacking in Burlington, Vermont
 <section class="container">
     <div class="row">
         <div class="col-sm-4 col-sm-push-8">
+{% assign featured_tag = "homepage" %}
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% assign has_events = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% if has_events == true %}
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <h1 class="panel-title"><strong>Upcoming Events</strong></h1>
+                    <h1 class="panel-title"><a href="/events/"><strong>Upcoming Events</strong></a></h1>
                 </div>
                 <div class="list-group">
-                    <a href="/events/2014/02/food-systems-hackathon/" class="list-group-item">
-                        <i class="fa fa-calendar"></i> Food Systems Hackathon
-                        <small>Feb 15-16</small>
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% if event.head %}
+                {% capture heading_text %}{{ event.head }}{% endcapture %}
+            {% else %}
+                {% capture heading_text %}{{ event.title }}{% endcapture %}
+            {% endif %}
+            {% if event.time %}
+                {% assign has_time = true %}
+            {% endif %}
+            {% if heading_text %}
+                    <a href="{{ event.url }}" class="list-group-item">
+                {% if has_time %}
+                        <i class="fa fa-calendar"></i> {{ heading_text }}
+                        <small>{% include helpers/event-date-text.html %}</small>
                         <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
+                {% endif %}
                     </a>
-                    <a href="/events/2014/02/codeacross-btv/" class="list-group-item">
-                        <i class="fa fa-calendar"></i> CodeAcross BTV
-                        <small>Feb 22-23</small>
-                        <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
-                    </a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
                 </div>
             </div>
+{% endif %}
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h1 class="panel-title">Announcements</h1>
@@ -67,47 +89,47 @@ title: Civic Hacking in Burlington, Vermont
                     </a>
                 </div>
             </div>
-            {% if site.categories.news %}
-                {% assign news_items = site.categories.news | size %}
-                {% assign news_limit = 5 %}
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h1 class="panel-title"><a href="/news/">In the News</a></h1>
-                    </div>
-                    <div class="list-group">
-                        {% for post in site.categories.news limit:news_limit %}
-                            {% if post.title %}
-                                {% if post.source %}
-                                    <a href="{{ post.source }}" class="list-group-item">
-                                {% else %}
-                                    <div class="list-group-item">
-                                {% endif %}
-                                    {% if post.published_date and post.publisher %}
-                                        <small>{{ post.published_date }} | <em>{{ post.publisher }}</em></small><br />
-                                    {% elsif post.published_date %}
-                                        <small>{{ post.published_date }}</small><br />
-                                    {% elsif post.publisher %}
-                                        <small><em>{{ post.publisher }}</em></small><br />
-                                    {% endif %}
-                                    {{ post.title }}
-                                    {% if post.source %}
-                                        <i class="fa fa-arrow-circle-right"></i>
-                                    {% endif %}
-                                {% if post.source %}
-                                    </a>
-                                {% else %}
-                                    </div>
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                    {% if news_items > news_limit %}
-                        <div class="panel-footer">
-                            <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
-                        </div>
-                    {% endif %}
+{% if site.categories.news %}
+    {% assign news_items = site.categories.news | size %}
+    {% assign news_limit = 5 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title"><a href="/news/">In the News</a></h1>
                 </div>
+                <div class="list-group">
+    {% for news_item in site.categories.news limit:news_limit %}
+        {% if news_item.title %}
+            {% if news_item.source %}
+                    <a href="{{ news_item.source }}" class="list-group-item">
+            {% else %}
+                    <div class="list-group-item">
             {% endif %}
+            {% if news_item.published_date and news_item.publisher %}
+                        <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+            {% elsif news_item.published_date %}
+                        <small>{{ news_item.published_date }}</small><br />
+            {% elsif news_item.publisher %}
+                        <small><em>{{ news_item.publisher }}</em></small><br />
+            {% endif %}
+                        {{ news_item.title }}
+            {% if news_item.source %}
+                        <i class="fa fa-arrow-circle-right"></i>
+            {% endif %}
+            {% if news_item.source %}
+                    </a>
+            {% else %}
+                    </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+                </div>
+    {% if news_items > news_limit %}
+                <div class="panel-footer">
+                    <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+    {% endif %}
+            </div>
+{% endif %}
         </div>
         <div class="col-sm-8 col-sm-pull-4">
             <article>

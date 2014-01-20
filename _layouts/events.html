@@ -1,0 +1,29 @@
+---
+layout: base
+---
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            {{ content }}
+        </div>
+        <div class="col-sm-4">
+            {% include events/panel-about.html %}
+{% if page.sidebar %}
+    {% for node in page.sidebar %}
+            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
+        {% if node.heading %}
+                <div class="panel-heading">
+                    <h1 class="panel-title">{{ node.heading }}</h1>
+                </div>
+        {% endif %}
+        {% if node.text %}
+                <div class="panel-body">
+                    {{ node.text | markdownify }}
+                </div>
+        {% endif %}
+            </div>
+    {% endfor %}
+{% endif %}
+        </div>
+    </div>
+</section>
