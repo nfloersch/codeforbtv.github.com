@@ -1,25 +1,33 @@
 ---
-permalink: /events/
+permalink: /archive/
 layout: default
-title: Events
+title: Archived Events
 ---
 <section>
     <div class="container">
 {% if site.categories.events %}
     {% for event in site.categories.events %}
-        {% assign has_time = false %}
-        {% if event.time %}
-            {% assign has_time = true %}
+        {% if event.archived == true %}
+            {% assign has_events = true %}
         {% endif %}
-        {% assign has_venue = false %}
-        {% if event.venue %}
-            {% assign has_venue = true %}
-        {% endif %}
-        {% assign has_registration = false %}
-        {% if event.registration_required and event.registration_archived != true %}
-            {% assign has_registration = true %}
-        {% endif %}
-        {% if event.title %}
+    {% endfor %}
+{% endif %}
+{% if has_events == true %}
+    {% for event in site.categories.events %}
+        {% if event.archived == true %}
+            {% assign has_time = false %}
+            {% if event.time %}
+                {% assign has_time = true %}
+            {% endif %}
+            {% assign has_venue = false %}
+            {% if event.venue %}
+                {% assign has_venue = true %}
+            {% endif %}
+            {% assign has_registration = false %}
+            {% if event.registration_required and event.registration_archived != true %}
+                {% assign has_registration = true %}
+            {% endif %}
+            {% if event.title %}
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h1 class="panel-title">
@@ -29,44 +37,45 @@ title: Events
                     </a>
                 </h1>
             </div>
-            {% if event.description %}
+                {% if event.description %}
             <div class="panel-body">
                 <p>{{ event.description }} <small><a href="{{ event.url }}">Read More <i class="fa fa-arrow-circle-right"></i></a></small></p>
             </div>
-            {% endif %}
-            {% if has_time or has_venue or has_registration %}
+                {% endif %}
+                {% if has_time or has_venue or has_registration %}
             <div class="panel-footer">
-                {% assign param_events_list_time_class = "list-inline pull-left" %}
-                {% assign param_time_format = "date-time" %}
-                {% include events/list-time.html %}
-                {% if has_venue %}
+                    {% assign param_events_list_time_class = "list-inline pull-left" %}
+                    {% assign param_time_format = "date-time" %}
+                    {% include events/list-time.html %}
+                    {% if has_venue %}
                 <div class="clearfix"></div>
                 <ul class="list-inline pull-left">
                     <li>
-                    {% for line in event.venue %}
-                        {% if forloop.first %}
+                        {% for line in event.venue %}
+                            {% if forloop.first %}
                         <i class="fa fa-map-marker"></i>
                         {{ line.text }}
-                        {% else %}
+                            {% else %}
                         <small>{% unless forloop.first %} | {% endunless %}{{ line.text }}</small>
-                        {% endif %}
-                    {% endfor %}
+                            {% endif %}
+                        {% endfor %}
                     </li>
                 </ul>
-                {% endif %}
-                {% if has_registration %}
-                <div class="pull-right">
-                    {% if event.registration_url %}
-                    <a href="{{ event.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>
-                    {% else %}
-                    <button class="btn btn-primary btn-sm" disabled="disabled"><i class="fa fa-ticket"></i> Register</button>
                     {% endif %}
+                    {% if has_registration %}
+                <div class="pull-right">
+                        {% if event.registration_url %}
+                    <a href="{{ event.registration_url }}" class="btn btn-primary btn-sm"><i class="fa fa-ticket"></i> Register</a>
+                        {% else %}
+                    <button class="btn btn-primary btn-sm" disabled="disabled"><i class="fa fa-ticket"></i> Register</button>
+                        {% endif %}
                 </div>
-                {% endif %}
+                    {% endif %}
                 <div class="clearfix"></div>
             </div>
-            {% endif %}
+                {% endif %}
         </div>
+            {% endif %}
         {% endif %}
     {% endfor %}
 {% else %}
