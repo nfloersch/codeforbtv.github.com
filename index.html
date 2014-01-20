@@ -21,23 +21,44 @@ include_page_header: false
 <section class="container">
     <div class="row">
         <div class="col-sm-4 col-sm-push-8">
+{% assign featured_tag = "homepage" %}
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% assign has_events = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% if has_events == true %}
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h1 class="panel-title"><a href="/events/"><strong>Upcoming Events</strong></a></h1>
                 </div>
                 <div class="list-group">
-                    <a href="/events/2014/02/food-systems-hackathon/" class="list-group-item">
-                        <i class="fa fa-calendar"></i> Food Systems Hackathon
-                        <small>Feb 15-16</small>
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% if event.head %}
+                {% capture heading_text %}{{ event.head }}{% endcapture %}
+            {% else %}
+                {% capture heading_text %}{{ event.title }}{% endcapture %}
+            {% endif %}
+            {% if event.time %}
+                {% assign has_time = true %}
+            {% endif %}
+            {% if heading_text %}
+                    <a href="{{ event.url }}" class="list-group-item">
+                {% if has_time %}
+                        <i class="fa fa-calendar"></i> {{ heading_text }}
+                        <small>{% include helpers/event-date-text.html %}</small>
                         <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
+                {% endif %}
                     </a>
-                    <a href="/events/2014/02/codeacross-btv/" class="list-group-item">
-                        <i class="fa fa-calendar"></i> CodeAcross BTV
-                        <small>Feb 22-23</small>
-                        <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
-                    </a>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
                 </div>
             </div>
+{% endif %}
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h1 class="panel-title">Announcements</h1>

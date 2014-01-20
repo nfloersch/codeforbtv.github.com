@@ -1,0 +1,38 @@
+{% assign logic_date_format = "%Y-%m-%d" %}
+
+{% assign first_date = event.time | first %}
+{% assign first_date_dtstart = first_date.dtstart | date: logic_date_format %}
+{% assign first_date_dtend = first_date.dtend | date: logic_date_format %}
+{% assign event_date_start = first_date_dtstart %}
+
+{% assign last_date = event.time | last %}
+{% assign last_date_dtstart = last_date.dtstart | date: logic_date_format %}
+{% assign last_date_dtend = last_date.dtend | date: logic_date_format %}
+{% if last_date_dtend %}
+    {% assign event_date_end = last_date_dtend %}
+{% else %}
+    {% assign event_date_end = last_date_dtstart %}
+{% endif %}
+
+{% assign date_format = "%b %-d" %}
+{% assign date_format_truncated = "%-d" %}
+
+{% if event_date_start != event_date_end %}
+    {% assign event_date_start_month_string = event_date_start | date: "%b" %}
+    {% assign event_date_end_month_string = event_date_end | date: "%b" %}
+    {% if event_date_start_month_string != event_date_end_month_string %}
+        {% capture event_date_text %}
+            {{ event_date_start | date: date_format }} - {{ event_date_end | date: date_format }}
+        {% endcapture %}
+    {% else %}
+        {% capture event_date_text %}
+            {{ event_date_start | date: date_format }}-{{ event_date_end | date: date_format_truncated }}
+        {% endcapture %}
+    {% endif %}
+{% else %}
+    {% capture event_date_text %}
+        {{ event_date_start | date: date_format }}
+    {% endcapture %}
+{% endif %}
+
+{{ event_date_text }}
