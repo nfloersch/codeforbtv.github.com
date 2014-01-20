@@ -1,0 +1,71 @@
+{% if page.time or page.time_notes %}
+    {% assign has_time = true %}
+{% endif %}
+{% if page.venue or page.venue_note %}
+    {% assign has_venue = true %}
+{% endif %}
+{% if page.registration_required and page.registration_archived != true %}
+    {% assign has_registration = true %}
+{% endif %}
+{% if has_time or has_venue or has_registration %}
+    {% assign has_about = true %}
+{% endif %}
+{% if has_about %}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1 class="panel-title">About the Event</h1>
+    </div>
+    <div class="list-group">
+    {% if has_time or has_venue %}
+        <div class="list-group-item">
+        {% if has_time %}
+            <h2 class="list-group-item-heading h4"><i class="fa fa-calendar"></i> When</h2>
+            {% assign event = page %}
+            {% assign param_events_list_time_class = "list-unstyled" %}
+            {% assign param_time_format = "date-time" %}
+            {% include events/list-time.html %}
+            {% if page.time_notes %}
+            <p class="text-muted"><small>{{ page.time_notes }}</small></p>
+            {% endif %}
+        {% endif %}
+        {% if has_venue %}
+            <h2 class="list-group-item-heading h4">
+                <i class="fa fa-map-marker"></i> Where
+            {% if page.venue_directions_url %}
+                <small> | <a href="{{ page.venue_directions_url }}">Directions</a></small>
+            {% endif %}
+            </h2>
+            {% include events/venue.html %}
+        {% endif %}
+        </div>
+    {% endif %}
+    {% if has_registration %}
+        <div class="list-group-item">
+            <h2 class="list-group-item-heading h4">Register to Attend</h2>
+        {% if page.registration_description %}
+            <p>{{ page.registration_description }}</p>
+        {% endif %}
+        {% if page.registration_url %}
+            <p>
+                <a href="{{ page.registration_url }}" class="btn btn-primary">
+                    <i class="fa fa-ticket"></i> Register
+                </a>
+            {% if page.registration_note %}
+                <span class="text-primary">{{ page.registration_note }}</span>
+            {% endif %}
+            </p>
+        {% else %}
+            <p>
+                <button class="btn btn-primary" disabled="disabled">
+                    <i class="fa fa-ticket"></i> Register
+                </button>
+            {% if page.registration_note %}
+                <span class="text-primary">{{ page.registration_note }}</span>
+            {% endif %}
+            </p>
+        {% endif %}
+        </div>
+    {% endif %}
+    </div>
+</div>
+{% endif %}
