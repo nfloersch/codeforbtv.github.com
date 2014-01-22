@@ -1,0 +1,48 @@
+{% assign news_limit = 5 %}
+{% if site.categories.news %}
+    {% for news_item in site.categories.news %}
+        {% if news_item.tags contains selected_tag %}
+            {% assign has_news_items = true %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% if has_news_items == true %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+    {% if news_by_tag_heading %}
+        <h1 class="panel-title">{{ news_by_tag_heading }}</h1>
+    {% else %}
+        <h1 class="panel-title">In the News</h1>
+    {% endif %}
+    </div>
+    <div class="list-group">
+    {% for news_item in site.categories.news %}
+        {% if news_item.tags contains selected_tag %}
+            {% if news_item.title %}
+                {% if news_item.source %}
+        <a href="{{ news_item.source }}" class="list-group-item">
+                {% else %}
+        <div class="list-group-item">
+                {% endif %}
+                {% if news_item.published_date and news_item.publisher %}
+            <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+                {% elsif news_item.published_date %}
+            <small>{{ news_item.published_date }}</small><br />
+                {% elsif news_item.publisher %}
+            <small><em>{{ news_item.publisher }}</em></small><br />
+                {% endif %}
+                {{ news_item.title }}
+                {% if news_item.source %}
+            <i class="fa fa-arrow-circle-right"></i>
+                {% endif %}
+                {% if news_item.source %}
+        </a>
+                {% else %}
+        </div>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endif %}
