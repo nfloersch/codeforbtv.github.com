@@ -64,6 +64,9 @@
             {% endif %}
             </p>
         {% endif %}
+        {% if page.registration_footer %}
+            <p><small>{{ page.registration_footer }}</small></p>
+        {% endif %}
         </div>
     {% endif %}
     </div>

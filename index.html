@@ -95,14 +95,15 @@ include_page_header: false
                 </div>
             </div>
 {% if site.categories.news %}
-    {% assign news_items = site.categories.news | size %}
+    {% assign news_items = site.categories.news %}
+    {% assign news_count = news_items | size %}
     {% assign news_limit = 5 %}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h1 class="panel-title"><a href="/news/">In the News</a></h1>
                 </div>
                 <div class="list-group">
-    {% for news_item in site.categories.news limit:news_limit %}
+    {% for news_item in news_items limit:news_limit %}
         {% if news_item.title %}
             {% if news_item.source %}
                     <a href="{{ news_item.source }}" class="list-group-item">
@@ -128,7 +129,7 @@ include_page_header: false
         {% endif %}
     {% endfor %}
                 </div>
-    {% if news_items > news_limit %}
+    {% if news_count > news_limit %}
                 <div class="panel-footer">
                     <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
                 </div>
