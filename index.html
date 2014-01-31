@@ -54,9 +54,16 @@ include_page_header: false
                 {% endif %}
                     </a>
             {% endif %}
+        {% else %}
+            {% assign has_events_without_featured_tag = true %}
         {% endif %}
     {% endfor %}
                 </div>
+    {% if has_events_without_featured_tag %}
+                <div class="panel-footer">
+                    <p><a href="/events/">More events <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+    {% endif %}
             </div>
 {% endif %}
             <div class="panel panel-info">
