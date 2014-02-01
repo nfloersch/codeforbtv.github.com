@@ -1,0 +1,72 @@
+---
+permalink: /office-hours/
+layout: default
+title: Office Hours at City Hall
+head: Office Hours
+subhead: at City Hall
+description: Code for BTV holds regular Office Hours during which elected officials, government staff, individuals, and civic hackers can participate in free and open dialogue about our community's challenges and opportunities.
+sidebar:
+ - heading: Please Follow the <em>Chatham House Rule</em>
+   text: <em>"When a meeting, or part thereof, is held under the Chatham House Rule, participants are free to use the information received, but neither the identity nor the affiliation of the speaker(s), nor that of any other participant, may be revealed."</em>
+---
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="media">
+                <img src="/img/events/hack-the-stacks-780x295.jpg" alt="Hack the Stacks" class="img-responsive" />
+                <div class="caption text-muted text-right">
+                    <p><small>Bradley Holt (Code for America Brigade Captain with Code for BTV), Mayor Miro Weinberger, Rubi Simon (Library Director, Fletcher Free Library) and Jason Pelletier (Code for America Brigade Captain with Code for BTV) at Hack the Stacks | <small>Credit: James Lockridge</small></small></p>
+                </div>
+            </div>
+            <h1>City of Burlington, Meet Your Civic Hackers</h1>
+            <p class="lead">{{ page.description }}</p>
+            <p>Civic hacking is a participatory effort to improve communities through technology. Like government, civic hacking is most effective when it is open and transparent. Code for BTV is a Code for America Brigade that develops, deploys, and maintains modern civic software and infrastructure for the benefit of communities in the greater Burlington area. Code for BTV works with the City of Burlington to develop civic apps that can facilitate local services, encourage civic engagement, or otherwise benefit the local community. The conversations that occur at Office Hours are instrumental in informing the work of civic hackers.</p>
+            <p><strong>All are welcome</strong> to participate in Code for BTV Office Hours at City Hall, providing that they do so in a manner that contributes to a constructive process.</p>
+            <ul>
+                <li><strong>Elected officials</strong> and <strong>government staff</strong> are encouraged to attend to discuss the opportunities and challenges that exist in their work.</li>
+                <li><strong>Civic hackers</strong> are encouraged to communicate directly with those knowledgeable about the opportunities and challenges faced by our community.</li>
+                <li>The <strong>general public</strong> is welcome—and encouraged—to participate in the work being done by Code for BTV.</li>
+            </ul>
+            <p>There is no need to register or RSVP to attend.</p>
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.tags contains "office hours" %}
+            {% unless output_event == true %}
+                {% if event.time %}
+                    {% for time in event.time %}
+            <p class="alert alert-info">
+                <a href="{{ event.url }}">
+                    <i class="fa fa-calendar"></i> Join us at the next Office Hours on <strong>{% include helpers/dtstart-to-dtend.html %}</strong><small> | Details <i class="fa fa-arrow-circle-right"></i></small>
+                </a>
+            </p>
+                    {% endfor %}
+                {% endif %}
+                {% assign output_event = true %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+        </div>
+        <div class="col-sm-4">
+            {% assign selected_tag = "office hours" %}
+            {% assign events_by_tag_heading = "Upcoming Office Hours" %}
+            {% include events-by-tag.html %}
+{% if page.sidebar %}
+    {% for node in page.sidebar %}
+            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
+        {% if node.heading %}
+                <div class="panel-heading">
+                    <h1 class="panel-title">{{ node.heading }}</h1>
+                </div>
+        {% endif %}
+        {% if node.text %}
+                <div class="panel-body">
+                    {{ node.text | markdownify }}
+                </div>
+        {% endif %}
+            </div>
+    {% endfor %}
+{% endif %}
+        </div>
+    </div>
+</section>
