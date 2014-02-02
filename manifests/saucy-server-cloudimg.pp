@@ -55,6 +55,12 @@ class saucy-server-cloudimg {
     require => Package["npm"],
   }
 
+  file { "/usr/bin/node":
+    ensure => "link",
+    target => "/usr/bin/nodejs",
+    require => Package["npm"],
+  }
+
 }
 
 include saucy-server-cloudimg
