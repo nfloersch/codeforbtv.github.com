@@ -4,9 +4,14 @@ class saucy-server-cloudimg {
     ensure => "latest",
   }
 
+  package { "ruby-dev":
+    ensure => "latest",
+    require => Package["ruby"],
+  }
+
   package { "bundler":
     provider => "gem",
-    require => Package["ruby"],
+    require => Package["ruby-dev"],
   }
 
   exec { "bundle-install":
