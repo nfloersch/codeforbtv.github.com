@@ -61,6 +61,10 @@ class saucy-server-cloudimg {
     require => Package["npm"],
   }
 
+  package { "git":
+    ensure => "latest",
+  }
+
 }
 
 include saucy-server-cloudimg
