@@ -14,9 +14,9 @@ class saucy-server-cloudimg {
     require => Package["ruby-dev"],
   }
 
-  exec { "bundle-install":
+  exec { "bundle-update":
     cwd => "/vagrant",
-    command => "/usr/local/bin/bundle install",
+    command => "/usr/local/bin/bundle update",
     logoutput => "on_failure",
     require => Package["bundler"],
   }
