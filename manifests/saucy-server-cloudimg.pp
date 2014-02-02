@@ -9,6 +9,13 @@ class saucy-server-cloudimg {
     require => Package["ruby"],
   }
 
+  exec { "bundle-install":
+    cwd => "/vagrant",
+    command => "/usr/local/bin/bundle install",
+    logoutput => "on_failure",
+    require => Package["bundler"],
+  }
+
 }
 
 include saucy-server-cloudimg
