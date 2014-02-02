@@ -1,0 +1,11 @@
+{
+  "name": "codeforbtv.org",
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
