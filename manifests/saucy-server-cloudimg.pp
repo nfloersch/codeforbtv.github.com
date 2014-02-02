@@ -21,6 +21,15 @@ class saucy-server-cloudimg {
     require => Package["bundler"],
   }
 
+  file { "/etc/default/locale":
+    ensure => file,
+    owner => root,
+    group => root,
+    mode => 0644,
+    source => "/vagrant/manifests/etc/default/locale",
+    require => Exec["bundle-update"],
+  }
+
 }
 
 include saucy-server-cloudimg
