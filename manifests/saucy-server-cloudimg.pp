@@ -17,6 +17,7 @@ class saucy-server-cloudimg {
 
   exec { "bundle-update":
     cwd => "/vagrant",
+    user => "vagrant",
     command => "/usr/local/bin/bundle update",
     logoutput => "on_failure",
     require => Package["bundler"],
@@ -39,6 +40,7 @@ class saucy-server-cloudimg {
 
   exec { "jekyll-serve":
     cwd => "/vagrant",
+    user => "vagrant",
     command => "/usr/local/bin/bundle exec jekyll serve --detach",
     logoutput => "on_failure",
     require => Exec["locale-gen"],
@@ -50,6 +52,7 @@ class saucy-server-cloudimg {
 
   exec { "npm-install":
     cwd => "/vagrant",
+    user => "vagrant",
     command => "/usr/bin/npm install --no-bin-link",
     logoutput => "on_failure",
     require => Package["npm"],
