@@ -30,6 +30,12 @@ class saucy-server-cloudimg {
     require => Exec["bundle-update"],
   }
 
+  exec { "locale-gen":
+    command => "/usr/sbin/locale-gen en_US en_US.UTF-8",
+    logoutput => "on_failure",
+    require => File["/etc/default/locale"],
+  }
+
 }
 
 include saucy-server-cloudimg
