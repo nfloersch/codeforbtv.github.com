@@ -11,6 +11,7 @@ class saucy-server-cloudimg {
 
   package { "bundler":
     provider => "gem",
+    ensure => "latest",
     require => Package["ruby-dev"],
   }
 
