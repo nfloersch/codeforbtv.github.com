@@ -68,6 +68,17 @@ class saucy-server-cloudimg {
     ensure => "latest",
   }
 
+  exec { "bower-install":
+    cwd => "/vagrant",
+    user => "vagrant",
+    command => "/vagrant/node_modules/bower/bin/bower install",
+    logoutput => "on_failure",
+    require => [
+        Exec["npm-install"],
+        Package["git"],
+    ],
+  }
+
 }
 
 include saucy-server-cloudimg
