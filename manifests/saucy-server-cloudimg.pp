@@ -44,6 +44,10 @@ class saucy-server-cloudimg {
     require => Exec["locale-gen"],
   }
 
+  package { "npm":
+    ensure => "latest",
+  }
+
 }
 
 include saucy-server-cloudimg
