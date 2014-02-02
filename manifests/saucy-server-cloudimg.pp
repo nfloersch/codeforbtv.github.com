@@ -48,6 +48,13 @@ class saucy-server-cloudimg {
     ensure => "latest",
   }
 
+  exec { "npm-install":
+    cwd => "/vagrant",
+    command => "/usr/bin/npm install --no-bin-link",
+    logoutput => "on_failure",
+    require => Package["npm"],
+  }
+
 }
 
 include saucy-server-cloudimg
