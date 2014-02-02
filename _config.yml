@@ -2,4 +2,4 @@ safe: true
 lsi: false
 pygments: false
 permalink: '/:categories/:year/:month/:title/'
-exclude: [CNAME, LICENSE.md, README.md]
+exclude: [CNAME, LICENSE.md, README.md, manifests]
