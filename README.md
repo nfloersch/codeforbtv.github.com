@@ -11,11 +11,9 @@ and [Vagrant](http://vagrantup.com/). To set up your own local development envir
 
 1. Install [VirtualBox](https://www.virtualbox.org/)
 2. Install [Vagrant](http://vagrantup.com/)
-3. Add the "Official Ubuntu 13.10 daily Cloud Image i386 (Development release, No Guest Additions)" box (if not already on your system):  
-`vagrant box add saucy-server-cloudimg http://cloud-images.ubuntu.com/vagrant/saucy/current/saucy-server-cloudimg-i386-vagrant-disk1.box`
-4. Bring up the virtual machine (from the root of this project):  
+3. Bring up the virtual machine (from the root of this project):  
 `vagrant up`
-5. The project should now be available on `localhost` port `8520`:  
+4. The project should now be available on `localhost` port `8520`:  
 `http://localhost:8520/`
 
 This website is built using [Jekyll](http://jekyllrb.com/), a blog-aware static 
