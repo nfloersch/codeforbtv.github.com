@@ -58,6 +58,12 @@ class saucy-server-cloudimg {
     require => Package["npm"],
   }
 
+  exec { "npm-install-grunt":
+    command => "/usr/bin/npm install -g grunt-cli",
+    logoutput => "on_failure",
+    require => Package["npm"],
+  }
+
   file { "/usr/bin/node":
     ensure => "link",
     target => "/usr/bin/nodejs",
