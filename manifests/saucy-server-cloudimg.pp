@@ -17,7 +17,6 @@ class saucy-server-cloudimg {
 
   exec { "bundle-update":
     cwd => "/vagrant",
-    user => "vagrant",
     command => "/usr/local/bin/bundle update",
     logoutput => "on_failure",
     require => Package["bundler"],
