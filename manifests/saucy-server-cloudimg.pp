@@ -37,14 +37,6 @@ class saucy-server-cloudimg {
     require => File["/etc/default/locale"],
   }
 
-  exec { "jekyll-serve":
-    cwd => "/vagrant",
-    user => "vagrant",
-    command => "/usr/local/bin/bundle exec jekyll serve --detach",
-    logoutput => "on_failure",
-    require => Exec["locale-gen"],
-  }
-
   package { "npm":
     ensure => "latest",
   }
