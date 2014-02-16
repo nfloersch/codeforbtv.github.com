@@ -13,8 +13,8 @@ and [Vagrant](http://vagrantup.com/). To set up your own local development envir
 2. Install [Vagrant](http://vagrantup.com/)
 3. Bring up the virtual machine (from the root of this project):  
 `vagrant up`
-4. The project should now be available on `localhost` port `8520`:  
-`http://localhost:8520/`
+4. The project should now be available at the IP address `192.168.33.11`:  
+`http://192.168.33.11/`
 
 This website is built using [Jekyll](http://jekyllrb.com/), a blog-aware static 
 site generator. See the [usage instructions](http://jekyllrb.com/docs/usage/) for more 
