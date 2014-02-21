@@ -30,7 +30,7 @@ sidebar:
             <p>There is no need to register or RSVP to attend.</p>
 {% if site.categories.events %}
     {% for event in site.categories.events reversed %}
-        {% if event.tags contains "office hours" %}
+        {% if event.tags contains "office hours" and event.archived != true %}
             {% unless output_event == true %}
                 {% if event.time %}
                     {% for time in event.time %}
