@@ -73,6 +73,7 @@ class saucy-server-cloudimg {
     logoutput => "on_failure",
     require => [
         Exec["npm-install"],
+        File ["/usr/bin/node"],
         Package["git"],
     ],
   }
