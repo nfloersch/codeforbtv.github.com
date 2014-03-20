@@ -76,6 +76,17 @@ class saucy-server-cloudimg {
     ],
   }
 
+  exec { "grunt-shell-jekyll-serve":
+    cwd => "/vagrant",
+    user => "vagrant",
+    command => "/usr/local/bin/grunt shell:jekyllServe &",
+    logoutput => "on_failure",
+    require => [
+      Exec["npm-install"],
+      Exec["npm-install-grunt"],
+    ]
+  }
+
 }
 
 include saucy-server-cloudimg
