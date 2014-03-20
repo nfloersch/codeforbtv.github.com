@@ -2,4 +2,4 @@ safe: true
 lsi: false
 pygments: false
 permalink: '/:categories/:year/:month/:title/'
-exclude: [CNAME, LICENSE.md, README.md, manifests]
+exclude: [CNAME, LICENSE.md, README.md, bower.json, Gemfile, Gemfile.lock, Gruntfile.js, package.json, Vagrantfile, _less, manifests]
