@@ -84,6 +84,7 @@ class saucy-server-cloudimg {
     command => "/usr/local/bin/grunt shell:jekyllServe &",
     logoutput => "on_failure",
     require => [
+      Exec["locale-gen"],
       Exec["npm-install"],
       Exec["npm-install-grunt"],
     ]
