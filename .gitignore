@@ -1,4 +1,7 @@
+/.vagrant
 /_site/
+/bower_components
+/Gemfile.lock
+/node_modules
+/npm-debug.log
 .DS_Store
-.vagrant
-Gemfile.lock
