@@ -48,5 +48,10 @@
         {% endif %}
     {% endfor %}
     </div>
+    {% if news_results > news_limit %}
+    <div class="panel-footer">
+        <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
+    </div>
+    {% endif %}
 </div>
 {% endif %}
