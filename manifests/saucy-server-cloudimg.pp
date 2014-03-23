@@ -11,12 +11,14 @@ class saucy-server-cloudimg {
 
   package { "bundler":
     provider => "gem",
+    ensure => "latest",
     require => Package["ruby-dev"],
   }
 
   exec { "bundle-update":
     cwd => "/vagrant",
     command => "/usr/local/bin/bundle update",
+    timeout => 0,
     logoutput => "on_failure",
     require => Package["bundler"],
   }
@@ -36,11 +38,56 @@ class saucy-server-cloudimg {
     require => File["/etc/default/locale"],
   }
 
-  exec { "jekyll-serve":
+  package { "npm":
+    ensure => "latest",
+  }
+
+  exec { "npm-install":
     cwd => "/vagrant",
-    command => "/usr/local/bin/bundle exec jekyll serve --detach",
+    user => "vagrant",
+    command => "/usr/bin/npm install --no-bin-link",
     logoutput => "on_failure",
-    require => Exec["locale-gen"],
+    require => Package["npm"],
+  }
+
+  exec { "npm-install-grunt":
+    command => "/usr/bin/npm install -g grunt-cli",
+    logoutput => "on_failure",
+    require => Package["npm"],
+  }
+
+  file { "/usr/bin/node":
+    ensure => "link",
+    target => "/usr/bin/nodejs",
+    require => Package["npm"],
+  }
+
+  package { "git":
+    ensure => "latest",
+  }
+
+  exec { "bower-install":
+    cwd => "/vagrant",
+    user => "vagrant",
+    command => "/vagrant/node_modules/bower/bin/bower install",
+    logoutput => "on_failure",
+    require => [
+        Exec["npm-install"],
+        File ["/usr/bin/node"],
+        Package["git"],
+    ],
+  }
+
+  exec { "grunt-shell-jekyll-serve":
+    cwd => "/vagrant",
+    user => "vagrant",
+    command => "/usr/local/bin/grunt shell:jekyllServe &",
+    logoutput => "on_failure",
+    require => [
+      Exec["locale-gen"],
+      Exec["npm-install"],
+      Exec["npm-install-grunt"],
+    ]
   }
 
 }
