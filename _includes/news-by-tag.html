@@ -1,6 +1,6 @@
 {% assign news_limit = 5 %}
-{% if site.categories.news %}
-    {% for news_item in site.categories.news %}
+{% if site.data.news %}
+    {% for news_item in site.data.news %}
         {% if news_item.tags contains selected_tag %}
             {% assign has_news_items = true %}
         {% endif %}
@@ -16,7 +16,7 @@
     {% endif %}
     </div>
     <div class="list-group">
-    {% for news_item in site.categories.news %}
+    {% for news_item in site.data.news %}
         {% if news_item.tags contains selected_tag %}
             {% if news_item.title %}
                 {% if news_item.source %}
