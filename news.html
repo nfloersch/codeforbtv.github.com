@@ -5,8 +5,8 @@ title: In the News
 ---
 <section>
     <div class="container">
-{% if site.categories.news %}
-    {% for news_item in site.categories.news %}
+{% if site.data.news %}
+    {% for news_item in site.data.news %}
         {% if news_item.title %}
         {% cycle 'row open': '<div class="row">', '', '', '' %}
             <div class="col-sm-6 col-md-3">

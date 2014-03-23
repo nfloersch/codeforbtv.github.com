@@ -1,12 +1,12 @@
 {% assign news_limit = 5 %}
-{% if site.categories.news %}
-    {% for news_item in site.categories.news %}
+{% if site.data.news %}
+    {% for news_item in site.data.news %}
         {% if news_item.tags contains selected_tag %}
-            {% assign has_news_items = true %}
+            {% assign news_results = news_results | plus: 1 %}
         {% endif %}
     {% endfor %}
 {% endif %}
-{% if has_news_items == true %}
+{% if news_results > 0 %}
 <div class="panel panel-default">
     <div class="panel-heading">
     {% if news_by_tag_heading %}
@@ -16,33 +16,42 @@
     {% endif %}
     </div>
     <div class="list-group">
-    {% for news_item in site.categories.news %}
+    {% assign news_results_iteration = 0 %}
+    {% for news_item in site.data.news %}
         {% if news_item.tags contains selected_tag %}
-            {% if news_item.title %}
-                {% if news_item.source %}
+            {% if news_limit > news_results_iteration %}
+                {% if news_item.title %}
+                    {% if news_item.source %}
         <a href="{{ news_item.source }}" class="list-group-item">
-                {% else %}
+                    {% else %}
         <div class="list-group-item">
-                {% endif %}
-                {% if news_item.published_date and news_item.publisher %}
+                    {% endif %}
+                    {% if news_item.published_date and news_item.publisher %}
             <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
-                {% elsif news_item.published_date %}
+                    {% elsif news_item.published_date %}
             <small>{{ news_item.published_date }}</small><br />
-                {% elsif news_item.publisher %}
+                    {% elsif news_item.publisher %}
             <small><em>{{ news_item.publisher }}</em></small><br />
-                {% endif %}
+                    {% endif %}
                 {{ news_item.title }}
-                {% if news_item.source %}
+                    {% if news_item.source %}
             <i class="fa fa-arrow-circle-right"></i>
-                {% endif %}
-                {% if news_item.source %}
+                    {% endif %}
+                    {% if news_item.source %}
         </a>
-                {% else %}
+                    {% else %}
         </div>
+                    {% endif %}
                 {% endif %}
+                {% assign news_results_iteration = news_results_iteration | plus: 1 %}
             {% endif %}
         {% endif %}
     {% endfor %}
     </div>
+    {% if news_results > news_limit %}
+    <div class="panel-footer">
+        <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
+    </div>
+    {% endif %}
 </div>
 {% endif %}

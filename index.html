@@ -116,8 +116,8 @@ include_page_header: false
                     </a>
                 </div>
             </div>
-{% if site.categories.news %}
-    {% assign news_items = site.categories.news %}
+{% if site.data.news %}
+    {% assign news_items = site.data.news %}
     {% assign news_count = news_items | size %}
     {% assign news_limit = 5 %}
             <div class="panel panel-default">
