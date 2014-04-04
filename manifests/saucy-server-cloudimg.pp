@@ -56,6 +56,17 @@ class saucy-server-cloudimg {
     require => Package["npm"],
   }
 
+  exec { "npm-update":
+    cwd => "/vagrant",
+    user => "vagrant",
+    command => "/usr/bin/npm update",
+    logoutput => "on_failure",
+    require => [
+      Exec["npm-install"],
+      Exec["npm-install-grunt"],
+    ]
+  }
+
   file { "/usr/bin/node":
     ensure => "link",
     target => "/usr/bin/nodejs",
@@ -72,7 +83,7 @@ class saucy-server-cloudimg {
     command => "/vagrant/node_modules/bower/bin/bower install",
     logoutput => "on_failure",
     require => [
-        Exec["npm-install"],
+        Exec["npm-update"],
         File ["/usr/bin/node"],
         Package["git"],
     ],
@@ -85,8 +96,7 @@ class saucy-server-cloudimg {
     logoutput => "on_failure",
     require => [
       Exec["locale-gen"],
-      Exec["npm-install"],
-      Exec["npm-install-grunt"],
+      Exec["npm-update"],
     ]
   }
 
