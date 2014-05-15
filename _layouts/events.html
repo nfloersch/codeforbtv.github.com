@@ -8,7 +8,7 @@ layout: base
         </div>
         <div class="col-sm-4">
             {% include events/panel-about.html %}
-{% if page.sponsors %}
+{% if page.sponsors and page.sponsor_layout == "sidebar" %}
             <div class="panel panel-default text-center sponsors">
                 <div class="panel-heading">
                     <h1 class="panel-title">Sponsors</h1>
