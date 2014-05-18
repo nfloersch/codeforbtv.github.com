@@ -67,6 +67,32 @@ body > footer {
     padding-bottom: 25px;
     background-color: #F1F1F1;
 }
+.anchor-nav {
+    @anchor-nav-padding-horizontal:     floor(@grid-gutter-width / 2);
+    @anchor-nav-link-color:             @brand-info;
+    @anchor-nav-link-hover-color:       darken(@anchor-nav-link-color, 10%);
+
+    margin-bottom: @line-height-computed;
+    padding-left: @anchor-nav-padding-horizontal;
+    border-left: 8px solid lighten(@anchor-nav-link-color, 20%);
+    font-size: 1.2em;
+    ul,
+    ol {
+        .list-unstyled();
+
+        > li {
+            display: inline-block;
+            padding-right: @anchor-nav-padding-horizontal;
+        }
+    }
+    a {
+        color: @anchor-nav-link-color;
+        &:hover,
+        &:focus {
+            color: @anchor-nav-link-hover-color;
+        }
+    }
+}
 .sponsors {
     img {
         max-width: 60%;
