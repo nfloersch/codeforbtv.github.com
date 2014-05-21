@@ -37,6 +37,7 @@ sidebar:
         <ol>
             <li><a href="#sponsors">Partners &amp; Sponsors</a></li>
             <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ol>
     </nav>
     <p>You don't need to be an expert to participate; you just have to care about your neighborhood and community. Participants will work on projects in the following areas:</p>
@@ -139,4 +140,77 @@ sidebar:
             </tbody>
         </table>
     </div>
+</article>
+<article id="projects">
+    <h1>Projects</h1>
+    <p>A variety of projects have been prepared for National Day of Civic Hacking. Some of these projects are ongoing, while others are new. We have collaborated with the City of Burlington as well as nonprofits to surface these projects. Additional details will be available at the event, and more projects will continue to be added as the event nears.</p>
+{% if site.data.2014-national-day-of-civic-hacking-projects %}
+    {% for project in site.data.2014-national-day-of-civic-hacking-projects %}
+    <article>
+        <nav>
+            <ul>
+                <li>
+        {% unless project.tracks contains "Food Systems & Agriculture" %}
+                    <del>
+        {% endunless %}
+                    <span class="fa-stack fa-lg" title="Food Systems &amp; Agriculture">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-cutlery fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Food Systems &amp; Agriculture</span>
+        {% unless project.tracks contains "Food Systems & Agriculture" %}
+                    </del>
+        {% endunless %}
+                </li>
+                <li>
+        {% unless project.tracks contains "Renewable & Sustainable Energy" %}
+                    <del>
+        {% endunless %}
+                    <span class="fa-stack fa-lg" title="Renewable &amp; Sustainable Energy">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-bolt fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Renewable &amp; Sustainable Energy</span>
+        {% unless project.tracks contains "Renewable & Sustainable Energy" %}
+                    </del>
+        {% endunless %}
+                </li>
+                <li>
+        {% unless project.tracks contains "Arts & Culture" %}
+                    <del>
+        {% endunless %}
+                    <span class="fa-stack fa-lg" title="Arts &amp; Culture">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-music fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Arts &amp; Culture</span>
+        {% unless project.tracks contains "Arts & Culture" %}
+                    </del>
+        {% endunless %}
+                </li>
+                <li>
+        {% unless project.tracks contains "Human-powered Recreation" %}
+                    <del>
+        {% endunless %}
+                    <span class="fa-stack fa-lg" title="Human-powered Recreation">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <span class="sr-only">Human-powered Recreation</span>
+        {% unless project.tracks contains "Human-powered Recreation" %}
+                    </del>
+        {% endunless %}
+                </li>
+            </ul>
+        </nav>
+        <header>
+            <h1>{{ project.title }}</h1>
+        {% if project.organizations.size > 0 %}
+            <p>{{ project.organizations | join: "; " }}</p>
+        {% endif %}
+        </header>
+        {{ project.description | markdownify }}
+    </article>
+    {% endfor %}
+{% endif %}
 </article>
