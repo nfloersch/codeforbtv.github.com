@@ -1,0 +1,32 @@
+- title: Recreation Trail Map
+  organizations: ["Burlington Parks, Recreation & Waterfront"]
+  description: "There are 35 miles of public trails across Burlington. This includes the Bike Path, as well as other trails that may be lesser known. These trails and paths connect people, parks, and places for a variety of uses. Recreation and social interaction opportunities abound. The Burlington Parks, Recreation & Waterfront Department invites a team to create a map that introduces residents and visitors alike to the trails and amenities available to them throughout the City."
+  tracks: ["Human-powered Recreation"]
+- title: Visualization of City Tree Data
+  organizations: ["Burlington Parks, Recreation & Waterfront"]
+  description: "The City of Burlington recently launched an [open data platform](http://data.burlingtonvt.gov/). One of the data sets contains a wealth of information about [City-managed trees](https://data.burlingtonvt.gov/City-Park-and-Tree-Data/City-Managed-Tree-Information/yp75-tsjj). Burlington Parks, Recreation & Waterfront invites a team to visualize this data in ways that promote outdoor recreation and/or educate individuals about these living City assets."
+  tracks: ["Human-powered Recreation"]
+- title: Lakecraft
+  organizations: ["ECHO Lake Aquarium and Science Center"]
+  description: "[Lakecraft](http://www.flickr.com/groups/lakecraft/) is an educational tool that engages youth and adults in science by gamifying the Lake Champlain Basin using open GIS data and a custom modification to Minecraft. The team is currently adding flowing rivers, and is seeking **Java programmers**. Experience with the following is helpful: algorithms, data structures, scientific modeling, working with voxels, Minecraft or Minecraft Bukkit modding, and building GUI apps in Java."
+  tracks: []
+- title: WordPress Websites for Vermont Nonprofit Organizations
+  organizations: ["Vermont Digital Economy Project"]
+  description: "Collaborating with the Vermont Digital Economy Project, volunteers working with Code for BTV have built or improved websites for over a dozen nonprofit organizations and plan to work on many more of these websites. The Vermont Digital Economy Project has found that communities with digitally connected nonprofit organizations are more resilient to natural disasters. These websites are helping to make Vermont nonprofits more connected, and thus are making Vermont communities more resilient."
+  tracks: []
+- title: Adopt-a-Drain
+  organizations: ["Burlington Stormwater Program"]
+  description: "Adopt-a-Drain allows individuals to claim responsibility for being a caretaker for a storm drain. The City of Burlington's Stormwater Program has been collaborating with a team to stand up a local instance of the Adopt-a-Drain app. Additional contributors with Ruby on Rails experience are welcome."
+  tracks: []
+- title: Library Statistics App
+  organizations: ["Fletcher Free Library"]
+  description: "Fletcher Free Library could benefit from having a web-based app that employees could use to submit statistics they collect about library utilization. This includes checkouts, door counts, website visits, computer center logins, Wi-Fi logins, volunteer hours, etc. A prototype exists and additional contributors are needed."
+  tracks: []
+- title: Increase Enrollment in Burlington Lead Program
+  organizations: ["CEDO"]
+  description: "[Burlington Lead Program](http://www.burlingtonvt.gov/CEDO/LeadProgram/) (BLP) is primarily a childhood lead poisoning prevention program that provides technical and financial assistance regarding lead and lead hazards to residents of Burlington and Winooski. BLP works with property owners to reduce lead paint hazards at their properties, and data is available about [locations where potential lead hazards have been reduced](https://data.burlingtonvt.gov/City-Hall/Burlington-Lead-Program/c2fa-nvqv). BLP would like to leverage technology to help increase enrollment in the program."
+  tracks: []
+- title: Burlington Child Care Mapping
+  organizations: []
+  description: "The Child Care Mapping project is mapping child care centers and related overlays. The app will be useful to families considering which child care facilities are the best fit for them. A JavaScript prototype is nearly finished and it is time for project re-evaluation/design and implementation."
+  tracks: []

@@ -178,6 +178,36 @@ body > footer {
         }
     }
 }
+#projects {
+    article {
+        .clearfix();
+        margin-top: 25px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-top: 1px dotted @gray-lighter;
+        header {
+            h1 {
+                .h3();
+                margin-bottom: 0;
+            }
+            p {
+                font-size: 1.0em;
+            }
+        }
+        nav {
+            .pull-right();
+            margin-left: 25px;
+            color: @brand-primary;
+            ul {
+                .list-unstyled();
+                margin-top: 25px;
+                del {
+                    color: lighten(#000, 85%);
+                }
+            }
+        }
+    }
+}
 header.jumbotron.national-day-of-civic-hacking {
     @national-day-of-civic-hacking-dark-blue:   #211d3e;
     @national-day-of-civic-hacking-light-blue:  #0a83c6;
