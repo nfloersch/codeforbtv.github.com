@@ -14,10 +14,6 @@
   organizations: ["Vermont Digital Economy Project"]
   description: "Collaborating with the Vermont Digital Economy Project, volunteers working with Code for BTV have built or improved websites for over a dozen nonprofit organizations and plan to work on many more of these websites. The Vermont Digital Economy Project has found that communities with digitally connected nonprofit organizations are more resilient to natural disasters. These websites are helping to make Vermont nonprofits more connected, and thus are making Vermont communities more resilient."
   tracks: []
-- title: Adopt-a-Drain
-  organizations: ["Burlington Stormwater Program"]
-  description: "Adopt-a-Drain allows individuals to claim responsibility for being a caretaker for a storm drain. The City of Burlington's Stormwater Program has been collaborating with a team to stand up a local instance of the Adopt-a-Drain app. Additional contributors with Ruby on Rails experience are welcome."
-  tracks: []
 - title: Library Statistics App
   organizations: ["Fletcher Free Library"]
   description: "Fletcher Free Library could benefit from having a web-based app that employees could use to submit statistics they collect about library utilization. This includes checkouts, door counts, website visits, computer center logins, Wi-Fi logins, volunteer hours, etc. A prototype exists and additional contributors are needed."
@@ -30,3 +26,19 @@
   organizations: []
   description: "The Child Care Mapping project is mapping child care centers and related overlays. The app will be useful to families considering which child care facilities are the best fit for them. A JavaScript prototype is nearly finished and it is time for project re-evaluation/design and implementation."
   tracks: []
+- title: "Food Shelf Connect: Act 148 Food Donation and Education App"
+  organizations: ["Vermont Foodbank"]
+  description: "This app will help guide people and organizations through the food donation process. Act 148 (Vermont's Universal Recycling Law) includes new rules for how leftover food must be donated or discarded. This app will help people determine whether their food should be donated to a food shelf, used as animal feed, or composted based on information the user provides about the food of which they are trying to dispose."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Farm Finder: Farm Stand Locator with Up-to-date Product Availability"
+  organizations: []
+  description: "This is a product and location based app for locally sourcing specific food items. Users would be able to search for specific food products and find farm stands and markets where they are currently available. Producers would be able to easily update the list of products offered as well indicate at which locations their goods can be found. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit?pli=1#heading=h.37cyzkfv41pv) are available."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Virtual Toolshed: Online Scheduling and Checkout App for Shared Farming Tools"
+  organizations: []
+  description: "Farming requires specialized tools and expensive equipment, such as hand tools or a tractor. Often these tools sit idle when they are not in use by the owner. An online app that would facilitate the farmer-to-farmer sharing of equipment to reduce costs for individual farming operations by facilitating the pooling of resources. This idea was explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference and [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit#heading=h.ssj9rr6ulm20) are available, including discovery work and four documented potential approaches."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Fill My Shelves/ Vermont Food Connect: Retailer-Producer Connector App"
+  organizations: []
+  description: "Connect food retailers, distributors and producers to help fill retailer supply shortages with locally-produced foods. An app combining alert and querying capabilities would help retailers communicate their inventory needs and help notify producers of relevant opportunities to get their food on the shelves. This would ultimately provide more options to consumers for locally sourced food items. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit?pli=1#heading=h.kaqmf4qoibsr) are available."
+  tracks: ["Food Systems & Agriculture"]
