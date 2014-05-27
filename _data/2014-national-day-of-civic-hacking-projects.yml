@@ -30,3 +30,19 @@
   organizations: []
   description: "The Child Care Mapping project is mapping child care centers and related overlays. The app will be useful to families considering which child care facilities are the best fit for them. A JavaScript prototype is nearly finished and it is time for project re-evaluation/design and implementation."
   tracks: []
+- title: Food Shelf Connect: Act 148 Food Donation and Education App
+  organizations: ["Vermont Foodbank"]
+  description: "An app to help guide people and organizations through the food donation process. Act 148 (Vermont's Universal Recycling Law) includes new rules for how leftover food must be donated or disposed of. This app will help people determine whether their food should be donated to a food shelf, used as animal feed or composted based on information the user provides on the food they are trying to dispose of."
+  tracks: ["Food Systems & Agriculture"]
+- title: Farm Finder: Farm-stand Locator with Up-to-Date Product Availability
+  organizations: []
+  description: "A product and location based app for locally sourcing specific food items. Users would be able to search for specific food products and find farm stands and markets where they are currently available. Producers would be able to easily update the list of products offered as well indicating which locations their goods can be found at. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit#heading=h.ssj9rr6ulm20) are available."
+  tracks: ["Food Systems & Agriculture"]
+- title: Virtual Toolshed: Online Scheduling/Checkout App for Shared Farming Tools
+  organizations: []
+  description: "Farming requires specialized tools and expensive equipment, such as hand tools or a tractor. Often these tools sit idle when they are not in use by the owner. An online app that would facilitate the farmer-to-farmer sharing of equipment to reduce costs for individual farming operations by facilitating the pooling of resources. This idea was explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference and [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit#heading=h.ssj9rr6ulm20) are available, including discovery work and four documented potential approaches."
+  tracks: ["Food Systems & Agriculture"]
+- title: Fill My Shelves/Vermont Food Connect: Retailer-Producer Connector App
+  organizations: []
+  description: "Connect food retailers, distributors and producers to help fill retailer supply shortages with locally-produced foods. An app combining alert and querying capabilities would help retailers communicate their inventory needs and help notify producers of relevant opportunities to get their food on the shelves. This would ultimately provide more options to consumers for locally sourced food items. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit#heading=h.ssj9rr6ulm20) are available."
+  tracks: ["Food Systems & Agriculture"]
