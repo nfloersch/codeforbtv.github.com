@@ -14,10 +14,6 @@
   organizations: ["Vermont Digital Economy Project"]
   description: "Collaborating with the Vermont Digital Economy Project, volunteers working with Code for BTV have built or improved websites for over a dozen nonprofit organizations and plan to work on many more of these websites. The Vermont Digital Economy Project has found that communities with digitally connected nonprofit organizations are more resilient to natural disasters. These websites are helping to make Vermont nonprofits more connected, and thus are making Vermont communities more resilient."
   tracks: []
-- title: Adopt-a-Drain
-  organizations: ["Burlington Stormwater Program"]
-  description: "Adopt-a-Drain allows individuals to claim responsibility for being a caretaker for a storm drain. The City of Burlington's Stormwater Program has been collaborating with a team to stand up a local instance of the Adopt-a-Drain app. Additional contributors with Ruby on Rails experience are welcome."
-  tracks: []
 - title: Library Statistics App
   organizations: ["Fletcher Free Library"]
   description: "Fletcher Free Library could benefit from having a web-based app that employees could use to submit statistics they collect about library utilization. This includes checkouts, door counts, website visits, computer center logins, Wi-Fi logins, volunteer hours, etc. A prototype exists and additional contributors are needed."
