@@ -42,3 +42,11 @@
   organizations: []
   description: "Connect food retailers, distributors and producers to help fill retailer supply shortages with locally-produced foods. An app combining alert and querying capabilities would help retailers communicate their inventory needs and help notify producers of relevant opportunities to get their food on the shelves. This would ultimately provide more options to consumers for locally sourced food items. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit?pli=1#heading=h.kaqmf4qoibsr) are available."
   tracks: ["Food Systems & Agriculture"]
+- title: City Employee Commute Data
+  organizations: ["CEDO"]
+  description: "CEDO has recently published [Burlington's Climate Action Plan](http://www.burlingtonvt.gov/Sustainability/What-is-a-Climate-Action-Plan), in which it sets out goals for the City and its residents to reduce their negative impact on climate. In 2010, the average commute distance was 13 miles one way, with 75% of City employees driving alone to work. The City would like to encourage workers to use alternative methods of commuting to work, thus reducing Greenhouse Gas emissions. Currently, CEDO does track employee commute data by way of a survey. The format, however, generally has a low response rate and is only implemented every two years. CEDO would like to track the employee commute more accurately and regularly, including the time to travel and mode split."
+  tracks: ["Renewable & Sustainable Energy"]
+- title: Visualize Findings and Plans of Climate Action Plan
+  organizations: ["CEDO"]
+  description: "[Burlington's Climate Action Plan](http://www.burlingtonvt.gov/Sustainability/What-is-a-Climate-Action-Plan) is a customized roadmap for making informed decisions that support emissions reductions. It includes an inventory of existing emissions, reduction targets and means of achieving those targets. Communication materials could be designed to help people absorb the data and inspire them to take action."
+  tracks: ["Renewable & Sustainable Energy"]
