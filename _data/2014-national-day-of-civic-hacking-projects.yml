@@ -62,3 +62,7 @@
   organizations: []
   description: "In an emergency, the most effective response is to engage the resources and skills of the entire community—including those of the municipality as well as those of its residents. Relevant resources in an emergency would include tangible items like chainsaws and boats, and would also include skills and knowledge, such as where people are located who know CPR or who are surgeons. The emergency planning capacities of municipalities could implement more effective plans if they have an inventory of these resources and a means of engaging those resources in the event of an emergency. A website or app could manage this data, inviting residents to voluntarily register their resources."
   tracks: []
+- title: Increase Public Engagement
+  organizations: ["CEDO"]
+  description: "There are many processes within the City that include a public comment component. While this part of the process is often a requirement, it is also helpful to the City in that it provides direct input from the community about their priorities. A public announcement along with the publication of project plans typically leads a public comment process. An app or other tool could be implemented that helps promote and facilitate this feedback process with the community. Critical to this would be considering how the community will engage with this process, from reviewing the plans to providing their comments."
+  tracks: []
