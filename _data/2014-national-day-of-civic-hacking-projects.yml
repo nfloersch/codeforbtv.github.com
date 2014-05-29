@@ -50,3 +50,11 @@
   organizations: ["CEDO"]
   description: "[Burlington's Climate Action Plan](http://www.burlingtonvt.gov/Sustainability/What-is-a-Climate-Action-Plan) is a customized roadmap for making informed decisions that support emissions reductions. It includes an inventory of existing emissions, reduction targets and means of achieving those targets. Communication materials could be designed to help people absorb the data and inspire them to take action."
   tracks: ["Renewable & Sustainable Energy"]
+- title: RentRocket
+  organizations: ["CEDO"]
+  description: "RentRocket is an online rental housing database that crowdsources utility cost and other environmental factors about rental properties. By making this information readily available, the project team hopes that renters can find cost effective and efficient places to live when they are searching for an apartment. In turn, the team hopes this encourages landlords to consider the value of environmental investments and gives them a way to share their environmental achievements. The project is a partnership among 10 cities across the country, and is being funded through the Innovation Fund of the Urban Sustainability Network and the Global Philanthropy Partnership. RentRocket is an open source project built with Django and Python, and is hosted on Google's App Engine. The [source code](https://github.com/City-of-Bloomington/green-rental) is available on Github. Contributors are welcome, and the setting up of a Vagrant development environment for the project would be a worthwhile contribution."
+  tracks: ["Renewable & Sustainable Energy"]
+- title: Facilitate the Sharing of Professional Skills
+  organizations: ["CEDO"]
+  description: "The concept is to provide a mechanism that facilitates the exchange of skills, services, ideas and consultation between professionals. There would not be a fee, currency or \"credit\" exchanged. This tool would explore the opportunities that are created when the sharing of knowledge isn't limited to financial motivations or budgetary constraints."
+  tracks: [""]
