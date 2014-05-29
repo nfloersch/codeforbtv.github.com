@@ -180,10 +180,8 @@ body > footer {
 }
 #projects {
     article {
-        .clearfix();
+        .make-row();
         margin-top: 25px;
-        padding-left: 20px;
-        padding-right: 20px;
         border-top: 1px dotted @gray-lighter;
         header {
             h1 {
@@ -195,8 +193,8 @@ body > footer {
             }
         }
         nav {
-            .pull-right();
-            margin-left: 25px;
+            .make-sm-column(1);
+            .make-sm-column-push(11);
             color: @brand-primary;
             ul {
                 .list-unstyled();
@@ -205,6 +203,10 @@ body > footer {
                     color: lighten(#000, 85%);
                 }
             }
+        }
+        .description {
+            .make-sm-column(10);
+            .make-sm-column-pull(1);
         }
     }
 }
