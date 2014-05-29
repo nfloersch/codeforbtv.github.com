@@ -204,13 +204,15 @@ sidebar:
                 </li>
             </ul>
         </nav>
-        <header>
-            <h1>{{ project.title }}</h1>
+        <div class="description">
+            <header>
+                <h1>{{ project.title }}</h1>
         {% if project.organizations.size > 0 %}
-            <p>{{ project.organizations | join: "; " }}</p>
+                <p>{{ project.organizations | join: "; " }}</p>
         {% endif %}
-        </header>
-        {{ project.description | markdownify }}
+            </header>
+            {{ project.description | markdownify }}
+        </div>
     </article>
     {% endfor %}
 {% endif %}
