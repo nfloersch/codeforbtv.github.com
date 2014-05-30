@@ -66,3 +66,11 @@
   organizations: ["CEDO"]
   description: "There are many processes within the City that include a public comment component. While this part of the process is often a requirement, it is also helpful to the City in that it provides direct input from the community about their priorities. A public announcement along with the publication of project plans typically leads a public comment process. An app or other tool could be implemented that helps promote and facilitate this feedback process with the community. Critical to this would be considering how the community will engage with this process, from reviewing the plans to providing their comments."
   tracks: []
+- title: Youth Program Check-in App
+  organizations: ["City of Winooski"]
+  description: "As part of their reporting requirements, Winooski must compile statistics about participation in their youth program. A check-in app would allow them to manage the data to complete this reporting more efficiently than a more manual process."
+  tracks: []
+- title: Library Calendar App
+  organizations: ["Fletcher Free Library", "City of Winooski"]
+  description: "Public libraries make public spaces available for community meetings and gatherings. Both Burlington's Fletcher Free Library and the City of Winooski could benefit from having a publicly-facing, web-based app through which rooms can be scheduled."
+  tracks: []
