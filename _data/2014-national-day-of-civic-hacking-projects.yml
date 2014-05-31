@@ -74,3 +74,15 @@
   organizations: ["Fletcher Free Library", "City of Winooski"]
   description: "Public libraries make public spaces available for community meetings and gatherings. Both Burlington's Fletcher Free Library and the City of Winooski could benefit from having a publicly-facing, web-based app through which rooms can be scheduled."
   tracks: []
+- title: SquaredAway Vermont
+  organizations: []
+  description: "According to many reputable sources, communication is the number one problem between tenants and landlords. SquaredAway Chicago provides access to resources, knowledge about rights and the ability to document and share issues between tenants and landlords in real time, leading to faster issue resolution, increased accountability and fewer misunderstandings. There is an interest in creating a SquaredAway Vermont version of this service. There are two goals for SquaredAway. First, add features to the SquaredAway web app such as the ability to login via Facebook or Google, translation integration, text messaging capability, or even building a native iOS or Android App. Second, start the process of developing a Vermont version of the app which would include mapping out the project, deciding what features to transfer, crafting new Vermont specific language, and mapping out potential partners."
+  tracks: []
+- title: WordPress Theme Maintenance for Music Websites
+  organizations: ["Big Heavy World"]
+  description: "The Big Heavy World website is a WordPress Multisite install and uses a set of themes that have distinct purposes. The project needs contributors with WordPress and CSS know-how to make some basic updates to these themes (including adding child themes that preserve the edits and improvements), and getting a business directory theme installed and running smoothly (including importing data to it from Google Spreadsheets). The Big Heavy World [website](bigheavyworld.com) is all about Vermont-made music—helping to promote and preserve it—and was built by volunteers. See the [new website](http://www.bigheavyworld.com/projects/the-new-web-site/)."
+  tracks: ["Arts & Culture"]
+- title: Music Business Directory
+  organizations: ["Big Heavy World"]
+  description: "Utilizing WordPress, the Big Heavy World website's music business directory needs contributors to take Vermont music industry contact information and import it from a Google Spreadsheet into categories within the directory. The new business directory [theme](http://themeforest.net/item/glocal-directory-listings-wordpress-theme/5545452) is installed but needs some debugging."
+  tracks: ["Arts & Culture"]
