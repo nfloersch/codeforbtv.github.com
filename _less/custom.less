@@ -67,6 +67,15 @@ body > footer {
     padding-bottom: 25px;
     background-color: #F1F1F1;
 }
+.text-muted {
+    &,
+    a {
+        color: @gray-light;
+    }
+    a {
+        text-decoration: underline;
+    }
+}
 .anchor-nav {
     @anchor-nav-padding-horizontal:     floor(@grid-gutter-width / 2);
     @anchor-nav-link-color:             @brand-info;

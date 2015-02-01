@@ -36,6 +36,9 @@
             {% endif %}
             </h2>
             {% include events/venue.html %}
+            {% if page.policies %}
+                <p class="text-muted"><small>{{ page.policies }}</small></p>
+            {% endif %}
         {% endif %}
         </div>
     {% endif %}
