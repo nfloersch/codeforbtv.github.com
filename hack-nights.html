@@ -1,0 +1,66 @@
+---
+permalink: /hack-nights/
+layout: default
+title: Hack Nights
+head: Hack Nights
+description: Code for BTV Hack Nights are held every Thursday (<em>except</em> the third Thursday of the month). We welcome everyone to join us and work together to improve their communities.
+sidebar:
+ - heading: Code of Conduct
+   text: All Code for BTV and Code for America events and their staff, presenters, and attendees are held to <a href="/policies/code-of-conduct/">a Code of Conduct and an Anti-Harassment Policy</a>.
+---
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="media">
+                <img src="/img/events/meetup-participants-780x295.jpg" alt="Meetup Participants" class="img-responsive" />
+                <div class="caption text-muted text-right">
+                    <p><small>Meetup participants work on community and civic projects. | <small>Credit: James Lockridge</small></small></p>
+                </div>
+            </div>
+            <h1>Collaborate on Community and Civic Projects</h1>
+            <p class="lead">{{ page.description }}</p>
+            <p>Code for BTV Hack Nights are a great opportunity to meet and collaborate with others working on community and civic projects. Whether you are a coder, designer, project manager, or are curious about how you can get involved, please join us. We need a wide variety of skills, experience and perspectives.</p>
+            <p>If you have a laptop, you may want to bring it. If you don't have a laptop, don't worry—you can still participate.</p>
+            <p><strong>Code for BTV Hack Nights are held every Thursday (<em>except</em> the third Thursday of the month).</strong> Looking for something to do on the third Thursday of each month? Join our friends and host <a href="http://generatorvt.com/">Burlington Generator</a> for their social mixer.</p>
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.tags contains "hack nights" and event.archived != true %}
+            {% unless output_event == true %}
+                {% if event.time %}
+                    {% for time in event.time %}
+            <p class="alert alert-info">
+                <a href="{{ event.url }}">
+                    <i class="fa fa-calendar"></i> Join us for our next Hack Night on <strong>{% include helpers/dtstart-to-dtend.html %}</strong><small> | Details <i class="fa fa-arrow-circle-right"></i></small>
+                </a>
+            </p>
+                    {% endfor %}
+                {% endif %}
+                {% assign output_event = true %}
+            {% endunless %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+        </div>
+        <div class="col-sm-4">
+            {% assign selected_tag = "hack nights" %}
+            {% assign events_by_tag_heading = "Upcoming Hack Nights" %}
+            {% include events-by-tag.html %}
+{% if page.sidebar %}
+    {% for node in page.sidebar %}
+            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
+        {% if node.heading %}
+                <div class="panel-heading">
+                    <h1 class="panel-title">{{ node.heading }}</h1>
+                </div>
+        {% endif %}
+        {% if node.text %}
+                <div class="panel-body">
+                    {{ node.text | markdownify }}
+                </div>
+        {% endif %}
+            </div>
+    {% endfor %}
+{% endif %}
+        </div>
+    </div>
+</section>
