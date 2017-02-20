@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }} • Code for BTV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/application.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/social-buttons.css">
+    <link rel="stylesheet" href="//openfontlibrary.org/face/alegreya" />
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script type="text/javascript" src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <link rel="respond-proxy" href="//netdna.bootstrapcdn.com/respond-proxy.html" id="respond-proxy" />
+        <link rel="respond-redirect" href="/img/respond.proxy.gif" id="respond-redirect" />
+        <script type="text/javascript" src="/js/respond.proxy.js"></script>
+    <![endif]-->
+</head>
+<body>
+{% unless page.include_page_header == false %}
+    {% include page-header.html %}
+{% endunless %}
+    {{ content }}
+    {% include about-code-for-btv.html %}
+    {% include page-footer.html %}
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
+</html>

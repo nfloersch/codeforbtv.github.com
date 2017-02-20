@@ -1,0 +1,56 @@
+---
+layout: base
+---
+<section class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            {{ content }}
+        </div>
+        <div class="col-sm-4">
+            {% include events/panel-about.html %}
+{% if page.sponsors and page.sponsor_layout == "sidebar" %}
+            <div class="panel panel-default text-center sponsors">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Sponsors</h1>
+                </div>
+                <div class="list-group">
+    {% for sponsor in page.sponsors %}
+                    <div class="list-group-item">
+        {% if sponsor.logo_path and sponsor.logo_alt %}
+            {% if sponsor.url %}
+                        <a href="{{ sponsor.url }}"><img src="{{ sponsor.logo_path }}" alt="{{ sponsor.logo_alt }}" class="img-responsive center-block" /></a>
+            {% else %}
+                        <img src="{{ sponsor.logo_path }}" alt="{{ sponsor.logo_alt }}" class="img-responsive center-block" />
+            {% endif %}
+        {% endif %}
+        {% if sponsor.name %}
+            {% if sponsor.url %}
+                        <p><a href="{{ sponsor.url }}">{{ sponsor.name }}</a></p>
+            {% else %}
+                        <p>{{ sponsor.name }}</p>
+            {% endif %}
+        {% endif %}
+                    </div>
+    {% endfor %}
+                </div>
+            </div>
+{% endif %}
+{% if page.sidebar %}
+    {% for node in page.sidebar %}
+            <div class="panel {% if node.class %}{{ node.class }}{% else %}panel-default{% endif %}">
+        {% if node.heading %}
+                <div class="panel-heading">
+                    <h1 class="panel-title">{{ node.heading }}</h1>
+                </div>
+        {% endif %}
+        {% if node.text %}
+                <div class="panel-body">
+                    {{ node.text | markdownify }}
+                </div>
+        {% endif %}
+            </div>
+    {% endfor %}
+{% endif %}
+        </div>
+    </div>
+</section>

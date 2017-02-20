@@ -1,0 +1,46 @@
+---
+permalink: /news/
+layout: default
+title: In the News
+---
+<section>
+    <div class="container">
+{% if site.data.news %}
+    {% for news_item in site.data.news %}
+        {% if news_item.title %}
+        {% cycle 'row open': '<div class="row">', '', '', '' %}
+            <div class="col-sm-6 col-md-3">
+                <h1 class="h4">
+            {% if news_item.published_date and news_item.publisher %}
+                    <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+            {% elsif news_item.published_date %}
+                    <small>{{ news_item.published_date }}</small><br />
+            {% elsif news_item.publisher %}
+                    <small><em>{{ news_item.publisher }}</em></small><br />
+            {% endif %}
+            {% if news_item.source %}
+                    <a href="{{ news_item.source }}">{{ news_item.title }}</a>
+            {% else %}
+                    {{ news_item.title }}
+            {% endif %}
+                </h1>
+            </div>
+            {% cycle 'row clearfix': '', '<div class="clearfix visible-sm"></div>', '', '' %}
+        {% cycle 'row close': '', '', '', '</div>' %}
+        {% endif %}
+    {% endfor %}
+{% else %}
+        <div class="row">
+            <div class="col-md-6 col-md-push-3">
+                <div class="alert alert-warning text-center">
+                    <p>
+                        <i class="fa fa-exclamation-triangle fa-4x"></i><br />
+                        We seem to be experiencing a technical difficulty.<br />
+                        <strong>Please try again later.</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+{% endif %}
+    </div>
+</section>

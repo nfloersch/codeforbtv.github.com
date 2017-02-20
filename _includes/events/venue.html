@@ -1,0 +1,14 @@
+{% if page.venue %}
+<address>
+    {% for line in page.venue %}
+        {% if line.link %}
+    <a href="{{ line.link }}">{{ line.text }}</a>{% unless forloop.last %}<br />{% endunless %}
+        {% else %}
+    {{ line.text }}{% unless forloop.last %}<br />{% endunless %}
+        {% endif %}
+    {% endfor %}
+</address>
+{% endif %}
+{% if page.venue_note %}
+<p class="text-muted"><small>{{ page.venue_note }}</small></p>
+{% endif %}

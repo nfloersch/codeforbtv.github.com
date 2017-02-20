@@ -6,18 +6,18 @@ This is the source code for the [codeforbtv.org](http://codeforbtv.org/) website
 Developing
 ----------
 
+Development of this web application is done using [VirtualBox](https://www.virtualbox.org/) 
+and [Vagrant](http://vagrantup.com/). To set up your own local development environment:
+
+1. Install [VirtualBox](https://www.virtualbox.org/)
+2. Install [Vagrant](http://vagrantup.com/)
+3. Bring up the virtual machine (from the root of this project):  
+`vagrant up`
+4. The project should now be available at the IP address `192.168.33.11` on port `4000`:  
+`http://192.168.33.11:4000/`
+
 This website is built using [Jekyll](http://jekyllrb.com/), a blog-aware static 
-site generator. In order to run your own local web server, see the instructions 
-on [installing Jekyll](https://github.com/mojombo/jekyll/wiki/install). Once installed,
-Jekyll can be run locally by running the following command from the root of this 
-project:
-
-    $ jekyll serve --watch
-
-The website should now be available on `localhost` port `4000`:  
-`http://localhost:4000/`
-
-See the [usage instructions](https://github.com/mojombo/jekyll/wiki/Usage) for more 
+site generator. See the [usage instructions](http://jekyllrb.com/docs/usage/) for more 
 information on working with Jekyll.
 
 Deploying

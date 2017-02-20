@@ -1,0 +1,88 @@
+- title: Recreation Trail Map
+  organizations: ["Burlington Parks, Recreation & Waterfront"]
+  description: "There are 35 miles of public trails across Burlington. This includes the Bike Path, as well as other trails that may be lesser known. These trails and paths connect people, parks, and places for a variety of uses. Recreation and social interaction opportunities abound. The Burlington Parks, Recreation & Waterfront Department invites a team to create a map that introduces residents and visitors alike to the trails and amenities available to them throughout the City."
+  tracks: ["Human-powered Recreation"]
+- title: Visualization of City Tree Data
+  organizations: ["Burlington Parks, Recreation & Waterfront"]
+  description: "The City of Burlington recently launched an [open data platform](http://data.burlingtonvt.gov/). One of the data sets contains a wealth of information about [City-managed trees](https://data.burlingtonvt.gov/City-Park-and-Tree-Data/City-Managed-Tree-Information/yp75-tsjj). Burlington Parks, Recreation & Waterfront invites a team to visualize this data in ways that promote outdoor recreation and/or educate individuals about these living City assets."
+  tracks: ["Human-powered Recreation"]
+- title: Lakecraft
+  organizations: ["ECHO Lake Aquarium and Science Center"]
+  description: "[Lakecraft](http://www.flickr.com/groups/lakecraft/) is an educational tool that engages youth and adults in science by gamifying the Lake Champlain Basin using open GIS data and a custom modification to Minecraft. The team is currently adding flowing rivers, and is seeking **Java programmers**. Experience with the following is helpful: algorithms, data structures, scientific modeling, working with voxels, Minecraft or Minecraft Bukkit modding, and building GUI apps in Java."
+  tracks: []
+- title: WordPress Websites for Vermont Nonprofit Organizations
+  organizations: ["Vermont Digital Economy Project"]
+  description: "Collaborating with the Vermont Digital Economy Project, volunteers working with Code for BTV have built or improved websites for over a dozen nonprofit organizations and plan to work on many more of these websites. The Vermont Digital Economy Project has found that communities with digitally connected nonprofit organizations are more resilient to natural disasters. These websites are helping to make Vermont nonprofits more connected, and thus are making Vermont communities more resilient."
+  tracks: []
+- title: Library Statistics App
+  organizations: ["Fletcher Free Library"]
+  description: "Fletcher Free Library could benefit from having a web-based app that employees could use to submit statistics they collect about library utilization. This includes checkouts, door counts, website visits, computer center logins, Wi-Fi logins, volunteer hours, etc. A prototype exists and additional contributors are needed."
+  tracks: []
+- title: Increase Enrollment in Burlington Lead Program
+  organizations: ["CEDO"]
+  description: "[Burlington Lead Program](http://www.burlingtonvt.gov/CEDO/LeadProgram/) (BLP) is primarily a childhood lead poisoning prevention program that provides technical and financial assistance regarding lead and lead hazards to residents of Burlington and Winooski. BLP works with property owners to reduce lead paint hazards at their properties, and data is available about [locations where potential lead hazards have been reduced](https://data.burlingtonvt.gov/City-Hall/Burlington-Lead-Program/c2fa-nvqv). BLP would like to leverage technology to help increase enrollment in the program."
+  tracks: []
+- title: Burlington Child Care Mapping
+  organizations: []
+  description: "The Child Care Mapping project is mapping child care centers and related overlays. The app will be useful to families considering which child care facilities are the best fit for them. A JavaScript prototype is nearly finished and it is time for project re-evaluation/design and implementation."
+  tracks: []
+- title: "Food Shelf Connect: Act 148 Food Donation and Education App"
+  organizations: ["Vermont Foodbank"]
+  description: "This app will help guide people and organizations through the food donation process. Act 148 (Vermont's Universal Recycling Law) includes new rules for how leftover food must be donated or discarded. This app will help people determine whether their food should be donated to a food shelf, used as animal feed, or composted based on information the user provides about the food of which they are trying to dispose."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Farm Finder: Farm Stand Locator with Up-to-date Product Availability"
+  organizations: []
+  description: "This is a product and location based app for locally sourcing specific food items. Users would be able to search for specific food products and find farm stands and markets where they are currently available. Producers would be able to easily update the list of products offered as well indicate at which locations their goods can be found. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit?pli=1#heading=h.37cyzkfv41pv) are available."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Virtual Toolshed: Online Scheduling and Checkout App for Shared Farming Tools"
+  organizations: []
+  description: "Farming requires specialized tools and expensive equipment, such as hand tools or a tractor. Often these tools sit idle when they are not in use by the owner. An online app that would facilitate the farmer-to-farmer sharing of equipment to reduce costs for individual farming operations by facilitating the pooling of resources. This idea was explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference and [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit#heading=h.ssj9rr6ulm20) are available, including discovery work and four documented potential approaches."
+  tracks: ["Food Systems & Agriculture"]
+- title: "Fill My Shelves/ Vermont Food Connect: Retailer-Producer Connector App"
+  organizations: []
+  description: "Connect food retailers, distributors and producers to help fill retailer supply shortages with locally-produced foods. An app combining alert and querying capabilities would help retailers communicate their inventory needs and help notify producers of relevant opportunities to get their food on the shelves. This would ultimately provide more options to consumers for locally sourced food items. Explored during the [Food Systems Hackathon](http://codeforbtv.org/events/2014/02/food-systems-hackathon/) at the NOFA-VT Winter Conference, [more details about this project](https://docs.google.com/document/d/1S_TysiEfshGR5bqOY7UzZyIBtYFgtQHOf6qPqW66L-I/edit?pli=1#heading=h.kaqmf4qoibsr) are available."
+  tracks: ["Food Systems & Agriculture"]
+- title: City Employee Commute Data
+  organizations: ["CEDO"]
+  description: "CEDO has recently published [Burlington's Climate Action Plan](http://www.burlingtonvt.gov/Sustainability/What-is-a-Climate-Action-Plan), in which it sets out goals for the City and its residents to reduce their negative impact on climate. In 2010, the average commute distance was 13 miles one way, with 75% of City employees driving alone to work. The City would like to encourage workers to use alternative methods of commuting to work, thus reducing Greenhouse Gas emissions. Currently, CEDO does track employee commute data by way of a survey. The format, however, generally has a low response rate and is only implemented every two years. CEDO would like to track the employee commute more accurately and regularly, including the time to travel and mode split."
+  tracks: ["Renewable & Sustainable Energy"]
+- title: Visualize Findings and Plans of Climate Action Plan
+  organizations: ["CEDO"]
+  description: "[Burlington's Climate Action Plan](http://www.burlingtonvt.gov/Sustainability/What-is-a-Climate-Action-Plan) is a customized roadmap for making informed decisions that support emissions reductions. It includes an inventory of existing emissions, reduction targets and means of achieving those targets. Communication materials could be designed to help people absorb the data and inspire them to take action."
+  tracks: ["Renewable & Sustainable Energy"]
+- title: RentRocket
+  organizations: ["CEDO"]
+  description: "RentRocket is an online rental housing database that crowdsources utility cost and other environmental factors about rental properties. By making this information readily available, the project team hopes that renters can find cost effective and efficient places to live when they are searching for an apartment. In turn, the team hopes this encourages landlords to consider the value of environmental investments and gives them a way to share their environmental achievements. The project is a partnership among 10 cities across the country, and is being funded through the Innovation Fund of the Urban Sustainability Network and the Global Philanthropy Partnership. RentRocket is an open source project built with Django and Python, and is hosted on Google's App Engine. The [source code](https://github.com/City-of-Bloomington/green-rental) is available on Github. Contributors are welcome, and the setting up of a Vagrant development environment for the project would be a worthwhile contribution."
+  tracks: ["Renewable & Sustainable Energy"]
+- title: Facilitate the Sharing of Professional Skills
+  organizations: ["CEDO"]
+  description: "The concept is to provide a mechanism that facilitates the exchange of skills, services, ideas and consultation between professionals. There would not be a fee, currency or \"credit\" exchanged. This tool would explore the opportunities that are created when the sharing of knowledge isn't limited to financial motivations or budgetary constraints."
+  tracks: []
+- title: Community Resiliency Resource Registry
+  organizations: []
+  description: "In an emergency, the most effective response is to engage the resources and skills of the entire community—including those of the municipality as well as those of its residents. Relevant resources in an emergency would include tangible items like chainsaws and boats, and would also include skills and knowledge, such as where people are located who know CPR or who are surgeons. The emergency planning capacities of municipalities could implement more effective plans if they have an inventory of these resources and a means of engaging those resources in the event of an emergency. A website or app could manage this data, inviting residents to voluntarily register their resources."
+  tracks: []
+- title: Increase Public Engagement
+  organizations: ["CEDO"]
+  description: "There are many processes within the City that include a public comment component. While this part of the process is often a requirement, it is also helpful to the City in that it provides direct input from the community about their priorities. A public announcement along with the publication of project plans typically leads a public comment process. An app or other tool could be implemented that helps promote and facilitate this feedback process with the community. Critical to this would be considering how the community will engage with this process, from reviewing the plans to providing their comments."
+  tracks: []
+- title: Youth Program Check-in App
+  organizations: ["City of Winooski"]
+  description: "As part of their reporting requirements, Winooski must compile statistics about participation in their youth program. A check-in app would allow them to manage the data to complete this reporting more efficiently than a more manual process."
+  tracks: []
+- title: Library Calendar App
+  organizations: ["Fletcher Free Library", "City of Winooski"]
+  description: "Public libraries make public spaces available for community meetings and gatherings. Both Burlington's Fletcher Free Library and the City of Winooski could benefit from having a publicly-facing, web-based app through which rooms can be scheduled."
+  tracks: []
+- title: SquaredAway Vermont
+  organizations: []
+  description: "According to many reputable sources, communication is the number one problem between tenants and landlords. SquaredAway Chicago provides access to resources, knowledge about rights and the ability to document and share issues between tenants and landlords in real time, leading to faster issue resolution, increased accountability and fewer misunderstandings. There is an interest in creating a SquaredAway Vermont version of this service. There are two goals for SquaredAway. First, add features to the SquaredAway web app such as the ability to login via Facebook or Google, translation integration, text messaging capability, or even building a native iOS or Android App. Second, start the process of developing a Vermont version of the app which would include mapping out the project, deciding what features to transfer, crafting new Vermont specific language, and mapping out potential partners."
+  tracks: []
+- title: WordPress Theme Maintenance for Music Websites
+  organizations: ["Big Heavy World"]
+  description: "The Big Heavy World website is a WordPress Multisite install and uses a set of themes that have distinct purposes. The project needs contributors with WordPress and CSS know-how to make some basic updates to these themes (including adding child themes that preserve the edits and improvements), and getting a business directory theme installed and running smoothly (including importing data to it from Google Spreadsheets). The Big Heavy World [website](bigheavyworld.com) is all about Vermont-made music—helping to promote and preserve it—and was built by volunteers. See the [new website](http://www.bigheavyworld.com/projects/the-new-web-site/)."
+  tracks: ["Arts & Culture"]
+- title: Music Business Directory
+  organizations: ["Big Heavy World"]
+  description: "Utilizing WordPress, the Big Heavy World website's music business directory needs contributors to take Vermont music industry contact information and import it from a Google Spreadsheet into categories within the directory. The new business directory [theme](http://themeforest.net/item/glocal-directory-listings-wordpress-theme/5545452) is installed but needs some debugging."
+  tracks: ["Arts & Culture"]

@@ -1,4 +1,6 @@
 safe: true
 lsi: false
-pygments: false
-exclude: CNAME, LICENSE.md, README.md
+highlighter: 'pygments'
+permalink: '/:categories/:year/:month/:title/'
+exclude: [CNAME, LICENSE.md, README.md, bower.json, Gemfile, Gemfile.lock, Gruntfile.js, package.json, Vagrantfile, _less, manifests]
+timezone: UTC

@@ -1,0 +1,46 @@
+{% assign events_limit = 5 %}
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.tags contains selected_tag %}
+            {% if event.archived != true %}
+                {% assign has_events = true %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% if has_events == true %}
+<div class="panel panel-primary">
+    <div class="panel-heading">
+    {% if events_by_tag_heading %}
+        <h1 class="panel-title">{{ events_by_tag_heading }}</h1>
+    {% else %}
+        <h1 class="panel-title">Upcoming Events</h1>
+    {% endif %}
+    </div>
+    <div class="list-group">
+    {% for event in site.categories.events reversed %}
+        {% if event.tags contains selected_tag %}
+            {% if event.archived != true %}
+                {% if event.head %}
+                    {% capture heading_text %}{{ event.head }}{% endcapture %}
+                {% else %}
+                    {% capture heading_text %}{{ event.title }}{% endcapture %}
+                {% endif %}
+                {% if event.time %}
+                    {% assign has_time = true %}
+                {% endif %}
+                {% if heading_text %}
+                        <a href="{{ event.url }}" class="list-group-item">
+                    {% if has_time %}
+                            <i class="fa fa-calendar"></i> {{ heading_text }}
+                            <small>{% include helpers/event-date-text.html %}</small>
+                            <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
+                    {% endif %}
+                        </a>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </div>
+</div>
+{% endif %}

@@ -1,142 +1,170 @@
 ---
-layout: default
-title: Code for BTV – A Code for America Brigade
+layout: base
+title: Civic Hacking in Burlington, Vermont
+include_page_header: false
 ---
-<header id="overview" class="code-for-btv">
-    <h1>Code for BTV</h1>
-    <h2>A Code for America Brigade</h2>
-    <p>Join over 50 developers, technology integrators, designers and hackers of all types in building and maintaining <a href="#projects">civic software and open data projects</a> in the greater Burlington, VT area.</p>
-    <p><small>Learn more about the <a href="/hackforchange/">National Day of Civic Hacking event</a> that kicked off Code for BTV.</small></p>
+<header class="jumbotron code-for-btv-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-sm-push-8 col-md-3 col-md-push-9">
+                <img src="/img/code-for-btv-reversed-500x500.png" alt="Code for BTV" class="code-for-btv-logo img-responsive hidden-xs" />
+                <img src="/img/code-for-btv-reversed-500x500.png" width="100" height="100" alt="Code for BTV" class="code-for-btv-logo img-responsive visible-xs center-block" />
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-sm-8 col-sm-pull-4 col-md-7 col-md-pull-2 text-center">
+                <h1>Everyone is a Civic Hacker</h1>
+                <p class="lead">Join other developers, technology integrators, designers and hackers of all types in building and maintaining civic software and open data projects in the greater Burlington, Vermont area.</p>
+            </div>
+        </div>
+    </div>
 </header>
-<section class="next">
-    <article>
-        <p>Our next meetup will be in August. <a href="#code-for-btv-meetup" class="button">Join Us</a></p>
-    </article>
+<section id="hack-nights" class="callout">
+    <div class="container">
+        <p>Join us for <strong>Hack Nights</strong>. <a href="/hack-nights/">Learn more. <i class="fa fa-arrow-circle-right"></i></a></p>
+    </div>
 </section>
-<section id="projects">
-    <h1>Projects</h1>
-    <p>The following projects are under active development.</p>
-    <article id="project-lakecraft">
-        <h1 class="title">Lakecraft</h1>
-        <p class="org">ECHO Lake Aquarium &amp; Science Center</p>
-        <p class="contributors"><strong>Contributors:</strong> Nina Ridhibhinyo, John Cohn, Nicholas Floersch, Will Fallows</p>
-        <p class="results">An educational tool that engages youth and adults in science by gamifying the Lake Champlain Basin. Using a custom modification to Minecraft, the group's goal is to eventually have a tool that may be used at the ECHO Center, at home, by educational institutions, and serve as a model to educators.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://www.flickr.com/groups/lakecraft/">Flickr Group</a></li>
-        </ul>
-    </article>
-    <article id="project-deerfield-valley-rescue">
-        <h1 class="title">Deerfield Valley Rescue</h1>
-        <p class="org">Vermont Digital Economy Project</p>
-        <p class="contributors"><strong>Contributors:</strong> Rob Fish, Timothy Clifford, Tabaré A. Gowon, Denise Puisto, Caitlyn Lovegrove, Dave Lovegrove</p>
-        <p class="results">DVR's website was outdated and corrupted. The group gave DVR a total site makeover, using WordPress, and integrated Facebook and Paypal donation functionality.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://dvrescue.org/">dvrescue.org</a></li>
-        </ul>
-    </article>
-    <article id="project-bethel-food-shelf">
-        <h1 class="title">Bethel Food Shelf</h1>
-        <p class="org">Vermont Digital Economy Project</p>
-        <p class="contributors"><strong>Contributors:</strong> Rob Fish, Timothy Clifford, Tabaré A. Gowon, Denise Puisto, Caitlyn Lovegrove, Dave Lovegrove</p>
-        <p class="results">The BFS had no web presence and no way to solicit for donations online. They also had no way to communicate their wish list. The team created a website that allows for donations to be made and makes it easy for BFS to update its wish list.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://bethelfoodshelf.org/">bethelfoodshelf.org</a></li>
-        </ul>
-    </article>
-    <article id="project-woodstock-job-bank">
-        <h1 class="title">Woodstock Job Bank</h1>
-        <p class="org">Vermont Digital Economy Project</p>
-        <p class="contributors"><strong>Contributors:</strong> Rob Fish, Timothy Clifford, Denise Puisto, Tabaré A. Gowon</p>
-        <p class="results">The team did a website redo and integrated Facebook in order to automate the submission and posting of jobs and integrate it with social media.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://woodstockjobbank.info/">woodstockjobbank.info</a></li>
-        </ul>
-    </article>
-    <article id="project-green-up-vermont">
-        <h1 class="title">Green Up Vermont</h1>
-        <p class="contributors"><strong>Contributors:</strong> Justin Adams, Scott MacEwan, Danielle Steimke, Collin Dewitt, Evan Yandell, Ethan Eldridge, Joshua Dickerson, Paul Kiripolsky</p>
-        <p class="results">During Green Up Vermont, many inefficiencies were identified: people covering the same ground multiples times, people not knowing where high need was, and not knowing where to drop off their garbage. The group created a web-based mobile user interface with server side service to collect data points as well as forums for discussion. A client-side data system allows for the organization of data points.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="https://github.com/EJEHardenberg/GreenUp">Prototype</a></li>
-        </ul>
-    </article>
-    <article id="project-music-venue-directory">
-        <h1 class="title">Music Venue Directory</h1>
-        <p class="org">Big Heavy World</p>
-        <p class="contributors"><strong>Contributors:</strong> Becky Grenier, Ben Glassman, Evan Flynn, Nicholas Edwards, William Keys</p>
-        <p class="results">The team used modern technology to update an out-of-date directory and make it scalable. The goal: Allow out-of-state bands to more easily book local venues. They used a web services backend with a Backbone.js frontend.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://github.com/codeforbtv/live-music-venue-directory">Prototype</a></li>
-        </ul>
-    </article>
-    <article id="project-discussion-forum">
-        <h1 class="title">Discussion Forum</h1>
-        <p class="org">Big Heavy World</p>
-        <p class="contributors"><strong>Contributors:</strong> Alan Peabody, Aaron Lipman, Peter Brown</p>
-        <p class="results">Big Heavy World's old forum was compromised by spammers and unmaintainable. The team installed and styled Discourse, the open source modern forum software.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://board.bigheavyworld.com/">board.bigheavyworld.com</a></li>
-        </ul>
-    </article>
-    <article id="project-fish-stocking-schedule">
-        <h1 class="title">Fish Stocking Schedule</h1>
-        <p class="org">Vermont Fish &amp; Wildlife</p>
-        <p class="contributors"><strong>Contributors:</strong> Matt Parrilla, Joe Di Stefano</p>
-        <p class="results">The team created an interface for interacting with fish stocking data, making data that is already available more useful by providing a better interface and some light analysis.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://s3.amazonaws.com/vt-stock-exchange/index">Prototype</a></li>
-        </ul>
-    </article>
-    <article id="project-burlington-city-wiki">
-        <h1 class="title">Burlington City Wiki</h1>
-        <p class="org">City of Burlington</p>
-        <p class="contributors"><strong>Contributors:</strong> Micah Mutrux, Carl Irving, Nicholas Szumowski</p>
-        <p class="results">The team created a central location where people may crowdsource information about Burlington. The wiki uses the MediaWiki platform and includes categories and a sampling of content. Importing and supporting extensions are in place (e.g., anti spam, social networking). The next step is to strategize a plan for content development and promotion of the wiki.</p>
-        <h2>More</h2>
-        <ul>
-            <li><a href="http://burlingtonwiki.com/">burlingtonwiki.com</a></li>
-        </ul>
-    </article>
-    <article id="project-school-juice">
-        <h1 class="title">School Juice</h1>
-        <p class="org">Burlington Electric Department</p>
-        <p class="contributors"><strong>Contributors:</strong> John Cohn, Alan Peabody, Jason Baker, Dan Companion, Ted Holtz, Joe Golden, Justin Adams, John Stanton</p>
-        <p class="results">The team brainstormed ways to begin providing electricity usage data from Burlington's new smart meters in some useful and open ways to the public. This information could be used by the public, by students and by the city to assess progress along the city's energy reduction goals. Our idea would be to present the energy usage data of all area schools in a way that can be searched, accessed by API and visualized.</p>
-    </article>
-</section>
-<section id="code-for-btv" class="vevent">
-    <h1>Stay Involved</h1>
-    <article id="code-for-btv-events">
-        <h1>Code for BTV</h1>
-        <p>Code for BTV is an ongoing effort to support civic hacking in the greater Burlington, VT area.</p>
-        <p>Periodically, we'll host events for hackers to come together and work on building and reusing civic apps and supporting open data initiatives.</p>
-        <nav>
-            <ul>
-                <li><strong>Stay in the loop about future events</strong> with our <a href="http://eepurl.com/zjEWf">newsletter</a> or follow <a href="https://twitter.com/CodeForBTV">@CodeForBTV</a>.</li>
-            </ul>
-        </nav>
-    </article>
-    <article id="code-for-btv-meetup">
-        <h1 class="summary"><abbr title="Code for BTV Meetup">Meetup</abbr></h1>
-        <p class="description">Participate in the next Code for BTV meetup. Participants will continue working on the <a href="#projects">civic hacking projects</a> that are actively being developed and/or maintained.</p>
-        <p class="time">Next Meetup: August (TBD)</p>
-        <nav>
-            <ul>
-                <li>Follow <a href="https://twitter.com/CodeForBTV">@CodeForBTV</a> on Twitter, sign-up for our <a href="http://eepurl.com/zjEWf">newsletter</a>, or check back for more details.</li>
-            </ul>
-        </nav>
-    </article>
-</section>
-<section class="callout">
-    <article>
-        <p>Our National Day of Civic Hacking event was a huge success. <a href="/hackforchange/">Learn more about the event</a> that kicked off Code for BTV.</p>
-    </article>
+<section class="container">
+    <div class="row">
+        <div class="col-sm-4 col-sm-push-8">
+{% assign featured_tag = "homepage" %}
+{% if site.categories.events %}
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% if event.archived != true %}
+                {% assign has_events = true %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+{% if has_events == true %}
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h1 class="panel-title"><a href="/events/"><strong>Upcoming Events</strong></a></h1>
+                </div>
+                <div class="list-group">
+    {% for event in site.categories.events reversed %}
+        {% if event.featured contains featured_tag %}
+            {% if event.archived != true %}
+                {% if event.head %}
+                    {% capture heading_text %}{{ event.head }}{% endcapture %}
+                {% else %}
+                    {% capture heading_text %}{{ event.title }}{% endcapture %}
+                {% endif %}
+                {% if event.time %}
+                    {% assign has_time = true %}
+                {% endif %}
+                {% if heading_text %}
+                        <a href="{{ event.url }}" class="list-group-item">
+                    {% if has_time %}
+                            <i class="fa fa-calendar"></i> {{ heading_text }}
+                            <small>{% include helpers/event-date-text.html %}</small>
+                            <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
+                    {% endif %}
+                        </a>
+                {% endif %}
+            {% endif %}
+        {% else %}
+            {% assign has_events_without_featured_tag = true %}
+        {% endif %}
+    {% endfor %}
+                </div>
+    {% if has_events_without_featured_tag %}
+                <div class="panel-footer">
+                    <p><a href="/events/">More events <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+    {% endif %}
+            </div>
+{% endif %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Join Code for BTV on Slack</h1>
+                </div>
+                <div class="panel-body">
+                    <p>Slack is a "platform for team communication." Code for BTV is using Slack for group communication around projects and Brigade activity. We welcome you to join.</p>
+                    <p><a href="http://goo.gl/forms/8dFuWKyGtP" class="btn btn-default"><i class="fa fa-slack"></i> Join Us on Slack</a></p>
+                </div>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h1 class="panel-title">Announcements</h1>
+                </div>
+                <div class="list-group">
+                    <a href="http://civicmediaproject.org/works/civic-media-project/theciviccloud" class="list-group-item">
+                        "The Civic Cloud: A Public Access Model and the Internet" Case Study Published by the MIT Press
+                        <i class="fa fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+{% if site.data.news %}
+    {% assign news_items = site.data.news %}
+    {% assign news_count = news_items | size %}
+    {% assign news_limit = 5 %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h1 class="panel-title"><a href="/news/">In the News</a></h1>
+                </div>
+                <div class="list-group">
+    {% for news_item in news_items limit:news_limit %}
+        {% if news_item.title %}
+            {% if news_item.source %}
+                    <a href="{{ news_item.source }}" class="list-group-item">
+            {% else %}
+                    <div class="list-group-item">
+            {% endif %}
+            {% if news_item.published_date and news_item.publisher %}
+                        <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+            {% elsif news_item.published_date %}
+                        <small>{{ news_item.published_date }}</small><br />
+            {% elsif news_item.publisher %}
+                        <small><em>{{ news_item.publisher }}</em></small><br />
+            {% endif %}
+                        {{ news_item.title }}
+            {% if news_item.source %}
+                        <i class="fa fa-arrow-circle-right"></i>
+            {% endif %}
+            {% if news_item.source %}
+                    </a>
+            {% else %}
+                    </div>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+                </div>
+    {% if news_count > news_limit %}
+                <div class="panel-footer">
+                    <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
+                </div>
+    {% endif %}
+            </div>
+{% endif %}
+        </div>
+        <div class="col-sm-8 col-sm-pull-4">
+            <article>
+                <h1>Projects</h1>
+                <p>Through collaborations with several organizations, more than 20 projects have been started since the National Day of Civic Hacking in June of 2013.</p>
+                <p>A collection of applications are under development that will help <strong><a href="http://bigheavyworld.com/">Big Heavy World</a></strong> promote and preserve Vermont-made music. Big Heavy World is a non-profit organization and a defacto music office for both the State of Vermont and the City of Burlington. Big Heavy World projects include a <strong>live music venue directory</strong>, a <strong>discussion forum</strong> for Vermont musicians, a <strong>music archive app</strong>, a <strong>music events calendar</strong>, and a <strong>Vermont artist directory</strong>.</p>
+                <p>Code for BTV volunteers developed a <strong>"green" printing app</strong> for <strong><a href="http://www.fletcherfree.org/">Fletcher Free Library</a></strong>. This app is designed to reduce unintentional and wasteful printing in the library's public access computer center by informing users how many pages they are about to print and the associated cost.</p>
+                <p>Collaborating with the <strong><a href="http://vtrural.org/programs/digital-economy">Vermont Digital Economy Project</a></strong>, volunteers working with Code for BTV have built or improved <strong>websites for over a dozen non-profit organizations</strong> and plan to work on many more of these websites. The Vermont Digital Economy Project has found that <strong>communities with digitally connected non-profit organizations are more resilient to natural disasters</strong>. These websites are helping to make Vermont non-profits more connected, and thus are making Vermont communities more resilient.</p>
+                <p><strong><a href="http://www.flickr.com/groups/lakecraft/">Lakecraft</a></strong> is an educational tool that engages youth and adults in science by gamifying the Lake Champlain Basin using open GIS data and a custom modification to Minecraft.</p>
+            </article>
+            <article>
+                <h1>Open Data</h1>
+                <p>The <a href="/collaborations/city-of-burlington/">City of Burlington</a> Mayor's Office recently launched an <strong><a href="https://data.burlingtonvt.gov/">open data platform</a></strong>, and Code for BTV has been working with them on this initiative. The State of Vermont is also working on its own open data portal. Brigade Captain Bradley Holt spoke at the inaugural <strong>Vermont Open Data Summit</strong> hosted by the Vermont Center for Geographic Information (VCGI). The Vermont Open Data Summit was the beginning of a discussion between government officials, civic hackers, and technologists.</p>
+            </article>
+            <article>
+                <h1>BTV Ignite</h1>
+                <p><a href="http://btvignite.com/">BTV Ignite</a> is a partnership between <strong>US Ignite</strong> and the <strong>City of Burlington</strong> that is leveraging Burlington's gigabit network as a <strong>test bed for the development of next generation gigabit Internet applications</strong>. Brigade Captains Jason Pelletier and Bradley Holt published a report in March of 2013 called <strong><em>Burlington's Gigabit Opportunity</em></strong> as part of an initiative called <a href="http://btvgig.org/">BTV Gig</a>. The report describes a strategy for developing a thriving <strong>culture of innovation around gigabit</strong> across a diverse range of constituents within Burlington. Brigade Captain Bradley Holt serves on the Burlington Mayor's BTV Ignite Advisory Committee. Code for BTV works with BTV Ignite and Burlington Telecom to make <strong>high-speed connectivity available at hackathons</strong> whenever possible.</p>
+            </article>
+            <article>
+                <h1>Civic Cloud Collaborative</h1>
+                <p>The Civic Cloud Collaborative includes eight forward-thinking organizations working to create civic and public spaces within Burlington's gigabit network. The <a href="/collaborations/civic-cloud/">Civic Cloud</a> will provide tools for <strong>innovative community organizers, non-profits and civic hackers</strong> in Burlington, Vermont. The Civic Cloud will build on Burlington’s fiber-optic gigabit network which provides Internet speeds of over 100 times the average national broadband speed. The Civic Cloud will be available for the community to use as a <strong>platform for public, non-commercial Internet applications and digital creative works</strong>.</p>
+                <p>The Civic Cloud Collaborative is comprised of Big Heavy World, CCTV Center for Media &amp; Democracy, Code for BTV, Found Line, Laboratory B, Regional Educational Television Network (RETN), and Vermont Community Access Media (VCAM). Found Line has facilitated the development of the Civic Cloud Collaborative.</p>
+                <p><a href="/collaborations/civic-cloud/">Read more <i class="fa fa-arrow-circle-right"></i></a></p>
+            </article>
+            <article>
+                <h1>New Moran</h1>
+                <p><a href="http://newmoran.org/">New Moran</a> is a plan to redevelop the landmark Moran Generating Station on Burlington's waterfront into a mixed-use, energy self-sufficient civic space. New Moran will be a hub for community gatherings while supporting human-powered recreation and access to local food, art, energy, and technology. Code for BTV is a New Moran program partner and plans to use New Moran as a <strong>community research &amp; development hub</strong>, an <strong>educational space</strong>, and a <strong>space for gathering and collaboration</strong>.</p>
+            </article>
+        </div>
+    </div>
 </section>
