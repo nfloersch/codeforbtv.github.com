@@ -26,55 +26,55 @@ include_page_header: false
 <section class="container">
     <div class="row">
         <div class="col-sm-4 col-sm-push-8">
-{% assign featured_tag = "homepage" %}
-{% if site.categories.events %}
-    {% for event in site.categories.events reversed %}
-        {% if event.featured contains featured_tag %}
+            {% assign featured_tag = "homepage" %}
+            {% if site.categories.events %}
+            {% for event in site.categories.events reversed %}
+            {% if event.featured contains featured_tag %}
             {% if event.archived != true %}
-                {% assign has_events = true %}
+            {% assign has_events = true %}
             {% endif %}
-        {% endif %}
-    {% endfor %}
-{% endif %}
-{% if has_events == true %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% if has_events == true %}
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h1 class="panel-title"><a href="/events/"><strong>Upcoming Events</strong></a></h1>
                 </div>
                 <div class="list-group">
-    {% for event in site.categories.events reversed %}
-        {% if event.featured contains featured_tag %}
-            {% if event.archived != true %}
-                {% if event.head %}
+                    {% for event in site.categories.events reversed %}
+                    {% if event.featured contains featured_tag %}
+                    {% if event.archived != true %}
+                    {% if event.head %}
                     {% capture heading_text %}{{ event.head }}{% endcapture %}
-                {% else %}
+                    {% else %}
                     {% capture heading_text %}{{ event.title }}{% endcapture %}
-                {% endif %}
-                {% if event.time %}
-                    {% assign has_time = true %}
-                {% endif %}
-                {% if heading_text %}
-                        <a href="{{ event.url }}" class="list-group-item">
-                    {% if has_time %}
-                            <i class="fa fa-calendar"></i> {{ heading_text }}
-                            <small>{% include helpers/event-date-text.html %}</small>
-                            <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
                     {% endif %}
-                        </a>
-                {% endif %}
-            {% endif %}
-        {% else %}
-            {% assign has_events_without_featured_tag = true %}
-        {% endif %}
-    {% endfor %}
+                    {% if event.time %}
+                    {% assign has_time = true %}
+                    {% endif %}
+                    {% if heading_text %}
+                    <a href="{{ event.url }}" class="list-group-item">
+                        {% if has_time %}
+                        <i class="fa fa-calendar"></i> {{ heading_text }}
+                        <small>{% include helpers/event-date-text.html %}</small>
+                        <span class="pull-right"><i class="fa fa-angle-double-right"></i></span>
+                        {% endif %}
+                    </a>
+                    {% endif %}
+                    {% endif %}
+                    {% else %}
+                    {% assign has_events_without_featured_tag = true %}
+                    {% endif %}
+                    {% endfor %}
                 </div>
-    {% if has_events_without_featured_tag %}
+                {% if has_events_without_featured_tag %}
                 <div class="panel-footer">
                     <p><a href="/events/">More events <i class="fa fa-arrow-circle-right"></i></a></p>
                 </div>
-    {% endif %}
+                {% endif %}
             </div>
-{% endif %}
+            {% endif %}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h1 class="panel-title">Join Code for BTV on Slack</h1>
@@ -95,50 +95,69 @@ include_page_header: false
                     </a>
                 </div>
             </div>
-{% if site.data.news %}
-    {% assign news_items = site.data.news %}
-    {% assign news_count = news_items | size %}
-    {% assign news_limit = 5 %}
+            {% if site.data.news %}
+            {% assign news_items = site.data.news %}
+            {% assign news_count = news_items | size %}
+            {% assign news_limit = 5 %}
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h1 class="panel-title"><a href="/news/">In the News</a></h1>
                 </div>
                 <div class="list-group">
-    {% for news_item in news_items limit:news_limit %}
-        {% if news_item.title %}
-            {% if news_item.source %}
+                    {% for news_item in news_items limit:news_limit %}
+                    {% if news_item.title %}
+                    {% if news_item.source %}
                     <a href="{{ news_item.source }}" class="list-group-item">
-            {% else %}
-                    <div class="list-group-item">
-            {% endif %}
-            {% if news_item.published_date and news_item.publisher %}
-                        <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
-            {% elsif news_item.published_date %}
-                        <small>{{ news_item.published_date }}</small><br />
-            {% elsif news_item.publisher %}
-                        <small><em>{{ news_item.publisher }}</em></small><br />
-            {% endif %}
-                        {{ news_item.title }}
-            {% if news_item.source %}
-                        <i class="fa fa-arrow-circle-right"></i>
-            {% endif %}
-            {% if news_item.source %}
-                    </a>
-            {% else %}
+                        {% else %}
+                        <div class="list-group-item">
+                            {% endif %}
+                            {% if news_item.published_date and news_item.publisher %}
+                            <small>{{ news_item.published_date }} | <em>{{ news_item.publisher }}</em></small><br />
+                            {% elsif news_item.published_date %}
+                            <small>{{ news_item.published_date }}</small><br />
+                            {% elsif news_item.publisher %}
+                            <small><em>{{ news_item.publisher }}</em></small><br />
+                            {% endif %}
+                            {{ news_item.title }}
+                            {% if news_item.source %}
+                            <i class="fa fa-arrow-circle-right"></i>
+                            {% endif %}
+                            {% if news_item.source %}
+                        </a>
+                        {% else %}
                     </div>
-            {% endif %}
-        {% endif %}
-    {% endfor %}
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
                 </div>
-    {% if news_count > news_limit %}
+                {% if news_count > news_limit %}
                 <div class="panel-footer">
                     <p><a href="/news/">More news <i class="fa fa-arrow-circle-right"></i></a></p>
                 </div>
-    {% endif %}
+                {% endif %}
             </div>
-{% endif %}
+            {% endif %}
         </div>
         <div class="col-sm-8 col-sm-pull-4">
+            <article>
+                <h1>Open Data Day 2017</h1>
+                <h2>Civic Tech Social and ‘Lightning Presentations’ on International Open Data Day, March 4th</h2>
+                <p>
+                    Burlington’s Code for America Brigade, ‘Code for BTV,’ is inviting the community to gather with us on March 4th in appreciation of the civic tech movement, data transparency, and what it can mean to the city, state, and country. March 4th is international Open Data Day, a celebration of how more and more data is being made available for anyone to work with to make their community better.
+                </p>
+                <p>
+                <b>We are looking for community members to share brief ‘lightning presentations’ (i.e., 5-10 minute talks) over the course of an hour about projects they’ve worked on that use publicly available data.</b> If you have worked on any projects that use open data, or that promote data transparency, for the civic good, we would love to have you present your work! Government projects, local non-profit projects, private projects - any projects that use open data, make data open, or collect open data, to help the world, are welcome. If you have an idea for an open data based project, and need help, let us know you want to come share that, and we’ll see if anyone wants to join your cause.
+                </p>
+                <p>
+                    The presentation format is simple: you can choose to use a slide-deck or not, and you get up and talk about your work for 5-10 minutes (depending on how many people sign up to talk). Each presenter comes up and talks in rapid succession, so there is not really much of a break between talks… we’ll have any slides setup to show before the lightning talks start, so there won’t be time taken to get the slides going. We want to cram as many talks into 1 hour as possible.
+                </p>
+                <p>
+                    <b>The Code for BTV Open Data Day Social runs from 6-8pm at Big Heavy World, located inside the SEABA Center at 404 Pine Street.</b> ‘Lightning Presentations’ will start at 6:30pm. The venue is wheelchair accessible. For more information: <a href="mailto:info@codeforbtv.org">info@codeforbtv.org</a>, (802) 373-2890
+                </p>
+                <p>
+                    We know we appreciate your sharing, and we believe many others will want to hear your stories about working with open data, too. Hope to see you there!
+                </p>
+            </article>
             <article>
                 <h1>Projects</h1>
                 <p>Through collaborations with several organizations, more than 20 projects have been started since the National Day of Civic Hacking in June of 2013.</p>
